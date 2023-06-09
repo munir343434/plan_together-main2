@@ -4,11 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:plan_together/utils/global_colors.dart';
 
 Widget getTextField(
-    { String? hint,
+    {String? hint,
     String? label,
     String? image,
-      IconData? iconData,
-      double height=64,
+    IconData? iconData,
+    double height = 64,
+      double? contentPadding,
+      double?borderRadius,
     TextEditingController? controller,
     Function(String)? onChanged,
     TextInputType? InputType,
@@ -28,11 +30,11 @@ Widget getTextField(
             fontFamily: 'ProximaNovaRegular',
             fontWeight: FontWeight.w400),
         decoration: InputDecoration(
-          hintText:hint!=null?hint:"",
-          contentPadding:
-              EdgeInsets.symmetric(vertical: 23.sp, horizontal: 26.sp),
+          hintText: hint != null ? hint : "",
+          contentPadding:contentPadding==null?
+              EdgeInsets.symmetric(vertical: 23.sp, horizontal: 26.sp):EdgeInsets.symmetric(horizontal: contentPadding.sp,),
           filled: true,
-          labelText:label !=null? label:"",
+          labelText: label != null ? label : "",
           labelStyle: TextStyle(color: GlobalColors.grey),
           fillColor: Colors.white,
           prefixIcon: image == null
@@ -51,18 +53,26 @@ Widget getTextField(
                       ),
                     ],
                   )),
-          suffixIcon:iconData==null?null:Icon(iconData,color: Colors.black,size: 20,) ,
+          suffixIcon: iconData == null
+              ? null
+              : Icon(
+                  iconData,
+                  color: Colors.black,
+                  size: 20,
+                ),
           hintStyle: TextStyle(
               color: Color(0xFF828F9C),
               fontSize: 15.sp,
               fontFamily: 'ProximaNovaRegular',
               fontWeight: FontWeight.w400),
           enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(48.sp),
-              borderSide: BorderSide(color: GlobalColors.border, width: 1.6.sp)),
+              borderRadius: borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(0),
+              borderSide:
+                  BorderSide(color: GlobalColors.border, width: 1.6.sp)),
           focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(48.sp),
-              borderSide: BorderSide(color: GlobalColors.border, width: 1.6.sp)),
+              borderRadius:borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(0),
+              borderSide:
+                  BorderSide(color: GlobalColors.border, width: 1.6.sp)),
         )),
   );
 }

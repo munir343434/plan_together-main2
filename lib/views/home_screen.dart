@@ -49,7 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                welcomeWidget(),
+                welcomeWidget(headingText: "Plan Together",subheading: "Build your own Vacation or Trip."),
                 MainButton(
                     height: 64,
                     color: GlobalColors.primaryColor,

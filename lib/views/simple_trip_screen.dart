@@ -4,13 +4,16 @@ import 'package:plan_together/cards/hotel_card.dart';
 import 'package:plan_together/cards/hourly_weather.dart';
 import 'package:plan_together/cards/resort_card.dart';
 import 'package:plan_together/cards/resort_card_new.dart';
+import 'package:plan_together/cards/trip_with_friend_simple.dart';
 import 'package:plan_together/cards/trips_with_friends.dart';
 import 'package:plan_together/cards/weather_main.dart';
 import 'package:plan_together/utils/global_colors.dart';
 import 'package:plan_together/utils/images.dart';
+import 'package:plan_together/widgets/add_new_trip_button.dart';
+import 'package:plan_together/widgets/mainButton.dart';
 
-class SuggestionsScreen extends StatelessWidget {
-  const SuggestionsScreen({super.key});
+class SimpleTrip extends StatelessWidget {
+  const SimpleTrip({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +21,7 @@ class SuggestionsScreen extends StatelessWidget {
       backgroundColor: GlobalColors.white,
       body: SafeArea(
           child: Padding(
-        padding: EdgeInsets.only(left: 22.sp, right: 20.sp),
+        padding: EdgeInsets.only(left: 17.sp, right: 17.sp,top: 10),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -29,21 +32,28 @@ class SuggestionsScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Padding(
+                    padding: EdgeInsets.only(top: 5),
+                    child: InkWell(
+                      onTap: (){
+                        Navigator.pop(context);
+                      },
+                      child: Icon(
+                        Icons.arrow_back_ios_rounded,
+                        color: GlobalColors.blackColor,
+                        size: 20,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 7,
+                  ),
                   Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'Welcome to',
-                        style: TextStyle(
-                            fontSize: 18.2.sp,
-                            fontWeight: FontWeight.w400,
-                            fontFamily: 'ProximaNovaRegular',
-                            color: Colors.black),
-                      ),
-                      SizedBox(height: 6.6.sp),
-                      Text(
-                        'Build your dream vacation\nor trip',
+                        'Get inspired',
                         style: TextStyle(
                             fontSize: 21.8.sp,
                             fontWeight: FontWeight.w700,
@@ -132,12 +142,14 @@ class SuggestionsScreen extends StatelessWidget {
               SizedBox(
                 height: 20.sp,
               ),
-              TripsWithFriends(
+              TripsWithFriendsSimple(
                 location: 'Sant Paulo, Milan, Italy',
                 dateFrom: 'Wed, Apr 28 2023',
                 timeFrom: '5:30 PM',
                 dateTo: 'Wed, Apr 28 2023',
                 timeTo: '5:30 PM',
+                buttonText: "Simple",
+                buttonColor: GlobalColors.primaryColor,
               ),
               SizedBox(
                 height: 20.sp,
@@ -388,7 +400,7 @@ class SuggestionsScreen extends StatelessWidget {
                 height: 16.sp,
               ),
               Text(
-                'Day 1',
+                'Day 2',
                 style: TextStyle(
                     fontSize: 19.8.sp,
                     fontWeight: FontWeight.w600,
@@ -410,7 +422,7 @@ class SuggestionsScreen extends StatelessWidget {
                 height: 20.sp,
               ),
               Text(
-                'Day 2',
+                'Day 3',
                 style: TextStyle(
                     fontSize: 19.8.sp,
                     fontWeight: FontWeight.w600,
@@ -431,72 +443,14 @@ class SuggestionsScreen extends StatelessWidget {
               SizedBox(
                 height: 5.sp,
               ),
-
-              Row(
-                children: [
-                  Container(
-                    height: 35.3.sp,
-                    width: 110.3.sp,
-                    decoration: BoxDecoration(
-                        color: GlobalColors.lightBlue2,
-                        borderRadius: BorderRadius.circular(26.4.sp)),
-                    child: Center(
-                      child: Text(
-                        'Save',
-                        style: TextStyle(
-                            fontSize: 12.36.sp,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'ProximaNovaMedium',
-                            color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 3.5.sp,
-                  ),
-                  Container(
-                    height: 35.3.sp,
-                    width: 110.3.sp,
-                    decoration: BoxDecoration(
-                        color: GlobalColors.green2,
-                        borderRadius: BorderRadius.circular(26.4.sp)),
-                    child: Center(
-                      child: Text(
-                        'Share',
-                        style: TextStyle(
-                            fontSize: 12.36.sp,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'ProximaNovaMedium',
-                            color: Colors.white),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 3.5.sp,
-                  ),
-                  Container(
-                    height: 35.3.sp,
-                    width: 110.3.sp,
-                    decoration: BoxDecoration(
-                        color: GlobalColors.red,
-                        borderRadius: BorderRadius.circular(26.4.sp)),
-                    child: Center(
-                      child: Text(
-                        'Delete',
-                        style: TextStyle(
-                            fontSize: 12.36.sp,
-                            fontWeight: FontWeight.w700,
-                            fontFamily: 'ProximaNovaMedium',
-                            color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+              Center(
+                  child: AddNewTripButton(
+                text: "Add Another Day",
+                width: 132,
+              )),
               SizedBox(
-                height: 30.sp,
-              ),
-
+                height: 64,
+              )
               // WeatherMain(
               //   date: 'Monday, December 20, 2021',
               //   time: '3.30PM',
@@ -534,6 +488,42 @@ class SuggestionsScreen extends StatelessWidget {
           ),
         ),
       )),
+      bottomNavigationBar: Padding(
+        padding:EdgeInsets.only(top: 10,left: 30,bottom: 15,right: 30),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            bottomContainer(image: checklist, color: GlobalColors.green),
+            bottomContainer(image: share, color: GlobalColors.green),
+            bottomContainer(image: delete, color: Color(0xffFF3333)),
+            MainButton(
+                width: 158,
+                height: 56,
+                color: GlobalColors.primaryColor,
+                text: "Save",
+                textColor: Colors.white,
+                textSize: 16,
+                textFont: FontWeight.w700),
+          ],
+        ),
+      ),
     );
   }
+}
+
+Widget bottomContainer({
+  required String image,
+  required Color color,
+}) {
+  return Container(
+    height: 36,
+    width: 36,
+    decoration: BoxDecoration(
+      shape: BoxShape.circle,
+      color: color,
+    ),
+    child: Center(
+      child: Image.asset(image),
+    ),
+  );
 }

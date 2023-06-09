@@ -122,7 +122,7 @@ class _TripSummeryState extends State<TripSummery>
               children: [
                 // Content of Tab 1
                 SingleChildScrollView(child: FlightInformation()),
-                 CheckList(),
+                 SingleChildScrollView(child: CheckList()),
                 // Content of Tab 2
                 SingleChildScrollView(child: WeatherWidget()),
                 // Content of Tab 3

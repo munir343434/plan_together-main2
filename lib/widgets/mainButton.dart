@@ -14,7 +14,7 @@ class MainButton extends StatefulWidget {
   FontWeight textFont;
   Color color;
   String? smallText;
-  Function? callback;
+  VoidCallback? onPressed;
 
   MainButton(
       {Key? key,
@@ -27,7 +27,7 @@ class MainButton extends StatefulWidget {
       required this.textFont,
       this.icon,
       this.smallText,
-        this.callback,
+        this.onPressed,
       this.border})
       : super(key: key);
 
@@ -40,67 +40,70 @@ class _MainButtonState extends State<MainButton> {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return Container(
-      height: widget.height,
-      width: widget.width,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(50),
-          border: widget.border,
-          color: widget.color),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(
-            width: 5,
-          ),
-          widget.icon != null
-              ? Row(
-                  children: [
-                    Image.asset(
-                      '${widget.icon}',
-                      height: 24.sp,
-                      width: 24.sp,
-                      fit: BoxFit.contain,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                  ],
-                )
-              : SizedBox.shrink(),
-          widget.smallText == null
-              ? Text(
-                  '${widget.text}',
-                  style: TextStyle(
-                      fontSize: widget.textSize,
-                      color: widget.textColor,
-                      fontWeight: widget.textFont),
-                )
-              : Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Text(
-                      '${widget.text}',
-                      style: TextStyle(
-                          fontSize: widget.textSize,
-                          color: widget.textColor,
-                          fontWeight: widget.textFont),
-                    ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      '${widget.smallText}',
-                      style: TextStyle(
-                          fontSize: 10,
-                          color: Colors.white,
-                          fontWeight: FontWeight.w400),
-                    )
-                  ],
-                )
-        ],
+    return InkWell(
+      onTap:widget.onPressed,
+      child: Container(
+        height: widget.height,
+        width: widget.width,
+        decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(50),
+            border: widget.border,
+            color: widget.color),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SizedBox(
+              width: 5,
+            ),
+            widget.icon != null
+                ? Row(
+                    children: [
+                      Image.asset(
+                        '${widget.icon}',
+                        height: 24.sp,
+                        width: 24.sp,
+                        fit: BoxFit.contain,
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                    ],
+                  )
+                : SizedBox.shrink(),
+            widget.smallText == null
+                ? Text(
+                    '${widget.text}',
+                    style: TextStyle(
+                        fontSize: widget.textSize,
+                        color: widget.textColor,
+                        fontWeight: widget.textFont),
+                  )
+                : Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Text(
+                        '${widget.text}',
+                        style: TextStyle(
+                            fontSize: widget.textSize,
+                            color: widget.textColor,
+                            fontWeight: widget.textFont),
+                      ),
+                      SizedBox(
+                        height: 5,
+                      ),
+                      Text(
+                        '${widget.smallText}',
+                        style: TextStyle(
+                            fontSize: 10,
+                            color: Colors.white,
+                            fontWeight: FontWeight.w400),
+                      )
+                    ],
+                  )
+          ],
+        ),
       ),
     );
   }

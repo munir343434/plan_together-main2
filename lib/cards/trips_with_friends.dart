@@ -15,10 +15,13 @@ class TripsWithFriends extends StatelessWidget {
       this.timeTo,
       this.dateTo,
       this.image,
+        this.buttonColor,
+        this.buttonText,
       this.onPressed})
       : super(key: key);
 
-  String? location, image, dateFrom, timeFrom, timeTo, dateTo;
+  String? location, image, dateFrom, timeFrom, timeTo, dateTo,buttonText;
+  Color? buttonColor;
   VoidCallback? onPressed;
   List<String> _images = [p1, p2, p3, p4, p1, p2, p3, p4, p1];
   @override
@@ -26,7 +29,6 @@ class TripsWithFriends extends StatelessWidget {
     return InkWell(
         onTap: onPressed,
         child: Container(
-          
           decoration: BoxDecoration(
             color: Colors.white,
             boxShadow: [defaultShadow],
@@ -43,14 +45,32 @@ class TripsWithFriends extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'Trips with friends',
-                      style: TextStyle(
-                          fontSize: 18.5.sp,
+                    Row(children: [
+                      Text(
+                        'Trips with friends',
+                        style: TextStyle(
+                            fontSize: 18.5.sp,
+                            fontWeight: FontWeight.w600,
+                            fontFamily: 'ProximaNovaSemiBold',
+                            color: Colors.black),
+                      ),
+                      SizedBox(width: 10,),
+                      Container(
+                        height: 18,
+                        width: 60.3,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            color: buttonColor
+                        ),child: Center(child: Text(
+                        buttonText.toString(),style: TextStyle(
+                          fontSize: 10,
                           fontWeight: FontWeight.w600,
-                          fontFamily: 'ProximaNovaSemiBold',
-                          color: Colors.black),
-                    ),
+                          color: Colors.white
+                      ),
+                      ),),
+                      ),
+                    ],),
+
                     SizedBox(
                       height: 7.5.sp,
                     ),
