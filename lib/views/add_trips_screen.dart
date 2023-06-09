@@ -7,7 +7,8 @@ import 'package:plan_together/cards/weather_main.dart';
 import 'package:plan_together/utils/global_colors.dart';
 import 'package:plan_together/utils/images.dart';
 import 'package:plan_together/views/create_trip.dart';
-import 'package:plan_together/views/suggestions_screen.dart';
+import 'package:plan_together/views/simple_trip_screen.dart';
+import 'package:plan_together/views/unique_trip_screen.dart';
 import 'package:plan_together/widgets/add_new_trip_btn.dart';
 import 'package:plan_together/widgets/welcome_widget.dart';
 
@@ -27,7 +28,7 @@ class AddTripsScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 15.sp),
-                welcomeWidget(),
+                welcomeWidget(headingText: "Get inspired",subheading: "Add attractions to your trip, see how far they are to your hotel and more!"),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -52,65 +53,89 @@ class AddTripsScreen extends StatelessWidget {
                 SizedBox(
                   height: 20.sp,
                 ),
-                SizedBox(
-                  height: 0.66.sh,
-                  child: ListView.builder(
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: 3,
-                    shrinkWrap: true,
-                    // scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: EdgeInsets.only(bottom: 12.sp),
-                        child: TripsWithFriends(
-                          location: 'Sant Paulo, Milan, Italy',
-                          dateFrom: 'Wed, Apr 28 2023',
-                          timeFrom: '5:30 PM',
-                          dateTo: 'Wed, Apr 28 2023',
-                          timeTo: '5:30 PM',
-                          onPressed: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const SuggestionsScreen(),
-                              )),
-                        ),
-                      );
-                    },
-                  ),
+                ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 2,
+                  shrinkWrap: true,
+                  // scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: EdgeInsets.only(bottom: 12.sp),
+                      child: TripsWithFriends(
+                        location: 'Sant Paulo, Milan, Italy',
+                        dateFrom: 'Wed, Apr 28 2023',
+                        timeFrom: '5:30 PM',
+                        dateTo: 'Wed, Apr 28 2023',
+                        timeTo: '5:30 PM',
+                        buttonColor: GlobalColors.primaryColor,
+                        buttonText: "Simple",
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const SimpleTrip(),
+                            )),
+                      ),
+                    );
+                  },
                 ),
-
-                SizedBox(
-                  height: 20.sp,
+                ListView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  itemCount: 1,
+                  shrinkWrap: true,
+                  // scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: EdgeInsets.only(bottom: 12.sp),
+                      child: TripsWithFriends(
+                        location: 'Sant Paulo, Milan, Italy',
+                        dateFrom: 'Wed, Apr 28 2023',
+                        timeFrom: '5:30 PM',
+                        dateTo: 'Wed, Apr 28 2023',
+                        timeTo: '5:30 PM',
+                        buttonColor: Color(0xff08B88E),
+                        buttonText: "Unique",
+                        onPressed: () => Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const UniqueTrip(),
+                            )),
+                      ),
+                    );
+                  },
                 ),
-                Text(
-                  'Top 10 Things to do in fx Dubai',
-                  style: TextStyle(
-                      fontSize: 19.8.sp,
-                      fontWeight: FontWeight.w600,
-                      fontFamily: 'ProximaNovaSemiBold',
-                      color: Colors.black),
-                ),
-                SizedBox(
-                  height: 20.sp,
-                ),
-                SizedBox(
-                  height: 0.63.sh,
-                  child: ListView.builder(
-                    itemCount: 2,
-                    shrinkWrap: true,
-                    // scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return ResortCard(
-                        image: dubai1,
-                        title: 'Legoland Dubai Resort',
-                        date: '23/09/2023',
-                        distance: '46km',
-                        description:
-                            'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
-                      );
-                    },
-                  ),
-                ),
+                //
+                // SizedBox(
+                //   height: 20.sp,
+                // ),
+                // Text(
+                //   'Top 10 Things to do in fx Dubai',
+                //   style: TextStyle(
+                //       fontSize: 19.8.sp,
+                //       fontWeight: FontWeight.w600,
+                //       fontFamily: 'ProximaNovaSemiBold',
+                //       color: Colors.black),
+                // ),
+                // SizedBox(
+                //   height: 20.sp,
+                // ),
+                // SizedBox(
+                //   height: 0.63.sh,
+                //   child: ListView.builder(
+                //     itemCount: 2,
+                //     shrinkWrap: true,
+                //     // scrollDirection: Axis.horizontal,
+                //     itemBuilder: (context, index) {
+                //       return ResortCard(
+                //         image: dubai1,
+                //         title: 'Legoland Dubai Resort',
+                //         date: '23/09/2023',
+                //         distance: '46km',
+                //         description:
+                //             'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
+                //       );
+                //     },
+                //   ),
+                // ),
 
                 // WeatherMain(
                 //   date: 'Monday, December 20, 2021',

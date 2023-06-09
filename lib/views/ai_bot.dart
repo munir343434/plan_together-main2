@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:plan_together/utils/images.dart';
 import 'package:plan_together/views/create_trip.dart';
+import 'package:plan_together/widgets/add_new_trip_button.dart';
 import 'package:plan_together/widgets/chat_bot.dart';
 import 'package:plan_together/widgets/recent_trips.dart';
 import 'package:plan_together/widgets/text_widget.dart';
@@ -47,35 +48,7 @@ class _AiBotState extends State<AiBot> {
                           )),
                       child: Padding(
                         padding: EdgeInsets.only(right: 17),
-                        child: Container(
-                          height: 31.sp,
-                          width: 114.sp,
-                          decoration: BoxDecoration(
-                              color: GlobalColors.primaryColor,
-                              borderRadius: BorderRadius.circular(23.1.sp)),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Text(
-                                'Add New Trip',
-                                style: TextStyle(
-                                    fontSize: 11.sp,
-                                    fontWeight: FontWeight.w600,
-                                    fontFamily: 'ProximaNovaRegular',
-                                    color: Colors.white),
-                              ),
-                              SizedBox(
-                                width: 3.sp,
-                              ),
-                              Icon(
-                                Icons.add,
-                                size: 12.sp,
-                                color: GlobalColors.white,
-                              )
-                            ],
-                          ),
-                        ),
+                        child: AddNewTripButton(text: "Add New Trip",)
                       ),
                     )
                   ],

@@ -23,4 +23,5 @@ class GlobalColors {
   static Color whiteColor = Color(0xffFFFFFF);
   static Color blackColor = Color(0xff000000);
   static Color greyColor = Color(0xffADB3BC);
+  static Color addMoreItems = Color(0xff8F8F8F);
 }

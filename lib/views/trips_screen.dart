@@ -26,7 +26,7 @@ class TripsScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 15.sp),
-              welcomeWidget(),
+              welcomeWidget(headingText: "Get inspired",subheading: "Add attractions to your trip, see how far they are to your hotel and more!"),
 
               Text(
                 'Recent Saved Trips',

@@ -30,7 +30,7 @@ class _SearchInboxState extends State<SearchInbox> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              welcomeWidget(),
+              welcomeWidget(headingText: "Plan Together",subheading: "Build your own Vacation or Trip."),
               TextWidget(
                   text: "Inbox",
                   size: 19.88,

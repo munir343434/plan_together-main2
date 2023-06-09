@@ -31,3 +31,7 @@ const pin = 'assets/images/pin.png';
 const tiktok = 'assets/images/tiktok.png';
 const instagram = 'assets/images/instagram.png';
 const hotel = 'assets/images/hotel.png';
+const share = 'assets/images/share.png';
+const delete = 'assets/images/delete.png';
+const checklist = 'assets/images/checklist.png';
+const cancel = 'assets/images/cancel.png';
