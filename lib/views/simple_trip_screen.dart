@@ -447,6 +447,7 @@ class SimpleTrip extends StatelessWidget {
                   child: AddNewTripButton(
                 text: "Add Another Day",
                 width: 132,
+                    onPressed: (){},
               )),
               SizedBox(
                 height: 64,

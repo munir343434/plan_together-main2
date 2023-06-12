@@ -10,6 +10,7 @@ import 'package:plan_together/views/create_trip.dart';
 import 'package:plan_together/views/simple_trip_screen.dart';
 import 'package:plan_together/views/unique_trip_screen.dart';
 import 'package:plan_together/widgets/add_new_trip_btn.dart';
+import 'package:plan_together/widgets/add_new_trip_button.dart';
 import 'package:plan_together/widgets/welcome_widget.dart';
 
 class AddTripsScreen extends StatelessWidget {
@@ -41,13 +42,14 @@ class AddTripsScreen extends StatelessWidget {
                           fontFamily: 'ProximaNovaSemiBold',
                           color: Colors.black),
                     ),
-                    AddNewTrip(onTap: (){
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const CreateTrip(),
-                          ));
-                    })
+
+
+                    AddNewTripButton(text: "Add New Trip", onPressed: (){ Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const CreateTrip(),
+                        ));})
+
                   ],
                 ),
                 SizedBox(
