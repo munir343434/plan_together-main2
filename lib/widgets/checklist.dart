@@ -20,15 +20,8 @@ class CheckList extends StatefulWidget {
 class _CheckListState extends State<CheckList> {
   List<String> _images = [p1, p2, p3, p4, p1, p2, p3, p4, p1];
 
-  List<String> itemList = [];
 
-  // List to store the added items
-  void addItem(String newItem) {
-    setState(() {
-      itemList.add(newItem); // Add the new item to the list
-    });
-  }
-
+  int selectedCheckboxIndex = -1;
   bool valuefirst = false;
   bool valuesecond = false;
   bool valuethird = false;
@@ -114,205 +107,25 @@ class _CheckListState extends State<CheckList> {
           SizedBox(
             height: 10,
           ),
-          AddmoreItems(img: p2, name: "Andrew Sams", role: "Added: 3 Things"),
-          SizedBox(
-            height: 10,
-          ),
-          GestureDetector(
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              TextWidget(
-                                  text: "Add New Item",
-                                  size: 16,
-                                  color: Color(0xff1B1F31),
-                                  fontWeight: FontWeight.w700),
-                              InkWell(
-                                  onTap: () {
-                                    Navigator.pop(context);
-                                  },
-                                  child: Image.asset(cancel))
-                            ],
-                          ),
-                          Divider(
-                            thickness: 1,
-                          )
-                        ],
-                      ),
-                      content: Container(
-                        height: 70,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            TextWidget(
-                                text: "Item Name",
-                                size: 16,
-                                color: Color(0xff2F2F2F),
-                                fontWeight: FontWeight.w400),
-                            SizedBox(
-                              height: 10,
-                            ),
-                            getTextField(
-                                height: 39,
-                                borderRadius: 0,
-                                controller: textFieldController,
-                                contentPadding: 20)
-                          ],
-                        ),
-                      ),
-                      actions: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 15),
-                          child: MainButton(
-                              height: 58,
-                              color: GlobalColors.primaryColor,
-                              text: "Add",
-                              textColor: Colors.white,
-                              textSize: 15,
-                              onPressed: () {
-                                String newItem = textFieldController.text;
-                                addItem(newItem);
-                                Navigator.of(context).pop();
-                                print(newItem);
-                              },
-                              textFont: FontWeight.w700),
-                        ),
-                      ],
-                    );
-                  },
-                );
-              },
-              child: AddmoreItems(
-                  img: p3, name: "Cameron ash", role: "Added: 3 Things")),
-          SizedBox(
-            height: 10,
-          ),
-          for (var item in itemList)
-            Container(
-              padding: EdgeInsets.only(left: 12, right: 12),
-              height: 53,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: valuefirst == true
-                      ? Color.fromRGBO(32, 185, 252, 0.07)
-                      : Colors.white),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  TextWidget(
-                    text: item,
-                    size: 15,
-                    color: GlobalColors.primaryColor,
-                    fontWeight: FontWeight.w600,
-                  ),
-                  Row(
-                    children: [
-                      Transform.scale(
-                        scale: 1.5,
-                        child: Checkbox(
-                          activeColor: GlobalColors.primaryColor,
-                          value: this.valuefirst,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(5.0),
-                            ),
-                          ),
-                          side: MaterialStateBorderSide.resolveWith(
-                            (Set<MaterialState> states) {
-                              if (states.contains(MaterialState.selected)) {
-                                return const BorderSide(
-                                    width: 2, color: Colors.transparent);
-                              }
-                              return const BorderSide(
-                                width: 1,
-                                color: Colors.black,
-                              );
-                            },
-                          ),
-                          onChanged: (bool? value) {
-                            setState(() {
-                              this.valuefirst = value!;
-                            });
-                          },
-                        ),
-                      ),
-                      Icon(
-                        Icons.more_vert_outlined,
-                        color: Color(0xff666666),
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ),
-        ],
-      ),
-    );
-  }
+          AddmoreItems(
+            img: p2,
+            name: "Andrew Sams",
+            role: "Added: 3 Things",
 
-  Widget builNewRow(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: 12, right: 12),
-      height: 53,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          color: valuefirst == true
-              ? Color.fromRGBO(32, 185, 252, 0.07)
-              : Colors.white),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          TextWidget(
-            text: textFieldController.text,
-            size: 15,
-            color: GlobalColors.primaryColor,
-            fontWeight: FontWeight.w600,
           ),
-          Row(
-            children: [
-              Transform.scale(
-                scale: 1.5,
-                child: Checkbox(
-                  activeColor: GlobalColors.primaryColor,
-                  value: this.valuefirst,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(5.0),
-                    ),
-                  ),
-                  side: MaterialStateBorderSide.resolveWith(
-                    (Set<MaterialState> states) {
-                      if (states.contains(MaterialState.selected)) {
-                        return const BorderSide(
-                            width: 2, color: Colors.transparent);
-                      }
-                      return const BorderSide(
-                        width: 1,
-                        color: Colors.black,
-                      );
-                    },
-                  ),
-                  onChanged: (bool? value) {
-                    setState(() {
-                      this.valuefirst = value!;
-                    });
-                  },
-                ),
-              ),
-              Icon(
-                Icons.more_vert_outlined,
-                color: Color(0xff666666),
-              )
-            ],
-          )
+          SizedBox(
+            height: 10,
+          ),
+          AddmoreItems(
+            img: p3,
+            name: "Cameron ash",
+            role: "Added: 3 Things",
+
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          SizedBox(height: 30,)
         ],
       ),
     );

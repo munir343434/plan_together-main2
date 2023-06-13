@@ -8,7 +8,8 @@ import '../utils/global_colors.dart';
 class AddNewTripButton extends StatelessWidget {
   String text;
   double? width=114.sp;
-   AddNewTripButton({Key? key,required this.text,this.width=114}) : super(key: key);
+  VoidCallback? onPressed;
+   AddNewTripButton({Key? key,required this.text,this.width=114,required this.onPressed}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

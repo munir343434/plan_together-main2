@@ -48,7 +48,7 @@ class _AiBotState extends State<AiBot> {
                           )),
                       child: Padding(
                         padding: EdgeInsets.only(right: 17),
-                        child: AddNewTripButton(text: "Add New Trip",)
+                        child: AddNewTripButton(text: "Add New Trip",onPressed: (){},)
                       ),
                     )
                   ],
