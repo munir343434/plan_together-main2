@@ -45,7 +45,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                 color: GlobalColors.homeBlackColor,
                 fontWeight: FontWeight.w700),
             TextWidget(
-                text: "Quick Trip",
+                text: "Simple Trip",
                 size: 13,
                 color: Color(0XFF797979),
                 fontWeight: FontWeight.w600)

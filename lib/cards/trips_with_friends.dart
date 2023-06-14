@@ -15,12 +15,16 @@ class TripsWithFriends extends StatelessWidget {
       this.timeTo,
       this.dateTo,
       this.image,
+        this.height,
+        this.width,
+        this.share,
         this.buttonColor,
         this.buttonText,
       this.onPressed})
       : super(key: key);
 
-  String? location, image, dateFrom, timeFrom, timeTo, dateTo,buttonText;
+  String? location, image, dateFrom, timeFrom, timeTo, dateTo,buttonText,share;
+  double? height=25.4,width=25.4;
   Color? buttonColor;
   VoidCallback? onPressed;
   List<String> _images = [p1, p2, p3, p4, p1, p2, p3, p4, p1];
@@ -168,9 +172,9 @@ class TripsWithFriends extends StatelessWidget {
                   ],
                 ),
                 Image.asset(
-                  info,
-                  height: 25.4.sp,
-                  width: 25.4.sp,
+                  share??"",
+                  height: height,
+                  width: width,
                   fit: BoxFit.contain,
                 )
               ],

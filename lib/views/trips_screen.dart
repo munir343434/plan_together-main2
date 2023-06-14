@@ -104,6 +104,7 @@ class TripsScreen extends StatelessWidget {
                         timeFrom: '5:30 PM',
                         dateTo: 'Wed, Apr 28 2023',
                         timeTo: '5:30 PM',
+                        share: info,
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(

@@ -16,7 +16,7 @@ class GlobalColors {
   static Color pink = Color(0xffF65B5B);
   static Color red = Color(0xffBD3517);
   static Color lightBlue2 = Color(0xff1976D2);
-
+  static Color plusButton = Color(0xff3CBC00);
   static Color homeBlackColor = Color(0xff101018);
   static Color subHeading = Color(0xff828F9C);
   static Color iconColor = Color(0xff595959);
@@ -24,4 +24,6 @@ class GlobalColors {
   static Color blackColor = Color(0xff000000);
   static Color greyColor = Color(0xffADB3BC);
   static Color addMoreItems = Color(0xff8F8F8F);
+  static Color followerNameColor = Color(0xff141619);
+  static Color followerUserNameColor = Color(0xff687684);
 }

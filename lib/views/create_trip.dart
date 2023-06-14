@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/utils/global_colors.dart';
 import 'package:plan_together/views/create_trip2.dart';
+import 'package:plan_together/widgets/custom_app_bar.dart';
 import 'package:plan_together/widgets/mainButton.dart';
 
 import '../widgets/text_widget.dart';
@@ -17,32 +18,7 @@ class CreateTrip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: AppBar(
-          elevation: 0.2,
-          backgroundColor: GlobalColors.whiteColor,
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios_rounded,
-              color: GlobalColors.blackColor,
-            ),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
-          title: TextWidget(
-              text: "Create Trip",
-              size: 21,
-              color: GlobalColors.homeBlackColor,
-              fontWeight: FontWeight.w700),
-          actions: [
-            Padding(
-                padding: EdgeInsets.only(right: 10),
-                child: Icon(
-                  Icons.more_vert_outlined,
-                  color: Colors.black,
-                ))
-          ],
-        ),
+        appBar: CustomAppBar(title: 'Create Trip', onBackButtonPressed: () {  }, onMoreButtonPressed: () {  },),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 19.sp),
           child: Column(

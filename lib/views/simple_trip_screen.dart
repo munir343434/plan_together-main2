@@ -367,6 +367,8 @@ class SimpleTrip extends StatelessWidget {
                 title: 'Legoland Dubai Resort',
                 date: '23/09/2023',
                 distance: '46km',
+                icon: Icons.remove,
+                iconButtonColor: Colors.red,
                 description:
                     'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
               ),
@@ -415,6 +417,8 @@ class SimpleTrip extends StatelessWidget {
                 title: 'Legoland Dubai Resort',
                 date: '23/09/2023',
                 distance: '46km',
+                icon: Icons.remove,
+                iconButtonColor: Colors.red,
                 description:
                     'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
               ),
@@ -437,6 +441,8 @@ class SimpleTrip extends StatelessWidget {
                 title: 'Legoland Dubai Resort',
                 date: '23/09/2023',
                 distance: '46km',
+                icon: Icons.remove,
+                iconButtonColor: Colors.red,
                 description:
                     'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
               ),

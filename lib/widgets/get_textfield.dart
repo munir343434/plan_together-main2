@@ -9,6 +9,7 @@ Widget getTextField(
     String? image,
     IconData? iconData,
     double height = 64,
+      int maxline=1,
       double? contentPadding,
       double?borderRadius,
     TextEditingController? controller,
@@ -19,6 +20,7 @@ Widget getTextField(
   return SizedBox(
     height: height,
     child: TextFormField(
+      maxLines: maxline,
         validator: validator,
         controller: controller,
         onChanged: onChanged,
@@ -66,11 +68,11 @@ Widget getTextField(
               fontFamily: 'ProximaNovaRegular',
               fontWeight: FontWeight.w400),
           enabledBorder: OutlineInputBorder(
-              borderRadius: borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(0),
+              borderRadius: borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
                   BorderSide(color: GlobalColors.border, width: 1.6.sp)),
           focusedBorder: OutlineInputBorder(
-              borderRadius:borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(0),
+              borderRadius:borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
                   BorderSide(color: GlobalColors.border, width: 1.6.sp)),
         )),

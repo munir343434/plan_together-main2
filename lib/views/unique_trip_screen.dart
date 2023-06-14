@@ -168,14 +168,6 @@ class UniqueTrip extends StatelessWidget {
                   SizedBox(
                     height: 20.sp,
                   ),
-                  ResortCardNew(
-                    image: dubai1,
-                    title: 'Legoland Dubai Resort',
-                    date: '23/09/2023',
-                    distance: '46km',
-                    description:
-                    'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
-                  ),
                   ListView.builder(
                       itemCount: 4,
                       shrinkWrap: true,
@@ -187,6 +179,8 @@ class UniqueTrip extends StatelessWidget {
                           date: '23/09/2023',
                           distance: '46km',
                           onPressed: () {},
+                          icon: Icons.add,
+                          iconButtonColor: GlobalColors.plusButton,
                           description:
                           'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
                         );

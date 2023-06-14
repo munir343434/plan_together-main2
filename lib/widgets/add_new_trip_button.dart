@@ -7,9 +7,12 @@ import '../utils/global_colors.dart';
 
 class AddNewTripButton extends StatelessWidget {
   String text;
+  Color? textColor;
   double? width=114.sp;
   VoidCallback? onPressed;
-   AddNewTripButton({Key? key,required this.text,this.width=114,required this.onPressed}) : super(key: key);
+  Color? buttonColor;
+
+   AddNewTripButton({Key? key,required this.text,this.width=114,required this.onPressed,this.buttonColor, this.textColor}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +20,7 @@ class AddNewTripButton extends StatelessWidget {
       height: 31.sp,
       width: width,
       decoration: BoxDecoration(
-          color: GlobalColors.primaryColor,
+          color:buttonColor==null? GlobalColors.primaryColor:buttonColor,
           borderRadius: BorderRadius.circular(23.1.sp)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -26,18 +29,18 @@ class AddNewTripButton extends StatelessWidget {
           Text(
             text,
             style: TextStyle(
-                fontSize: 11.sp,
+                fontSize:textColor==null? 11.sp:15,
                 fontWeight: FontWeight.w600,
                 fontFamily: 'ProximaNovaRegular',
-                color: Colors.white),
+                color:textColor==null? Colors.white:textColor),
           ),
           SizedBox(
             width: 3.sp,
           ),
           Icon(
             Icons.add,
-            size: 12.sp,
-            color: GlobalColors.white,
+            size:textColor==null? 12.sp:20,
+            color:textColor==null? GlobalColors.white:GlobalColors.primaryColor,
           )
         ],
       ),
