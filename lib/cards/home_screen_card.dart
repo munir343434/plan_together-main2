@@ -10,7 +10,7 @@ import 'package:plan_together/views/comments_screen.dart';
 import 'package:plan_together/widgets/text_widget.dart';
 
 // ignore: must_be_immutable
-class HomeScreenCard extends StatelessWidget {
+class HomeScreenCard extends StatefulWidget {
   HomeScreenCard({
     Key? key,
     this.hearts,
@@ -24,10 +24,19 @@ class HomeScreenCard extends StatelessWidget {
 
   String? hearts, comments, rating, image, description, username;
   VoidCallback? onPressed;
+
+  @override
+  State<HomeScreenCard> createState() => _HomeScreenCardState();
+}
+
+class _HomeScreenCardState extends State<HomeScreenCard> {
+  bool isFavoriteClicked = false;
+  bool isCommentClicked = false;
+  bool isSendClicked = false;
+  bool isBookmarkClicked = false;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 520,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(15),
@@ -50,7 +59,7 @@ class HomeScreenCard extends StatelessWidget {
                 height: 36.12,
               ),
               TextWidget(
-                  text: "${username}",
+                  text: "${widget.username}",
                   size: 14.15,
                   color: GlobalColors.homeBlackColor,
                   fontWeight: FontWeight.w600),
@@ -71,7 +80,7 @@ class HomeScreenCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   TextWidget(
-                      text: "${description}",
+                      text: "${widget.description}",
                       size: 11.4,
                       color: Colors.black,
                       fontWeight: FontWeight.w400),
@@ -82,7 +91,7 @@ class HomeScreenCard extends StatelessWidget {
           ),
           Stack(alignment: Alignment.center, children: [
             Image.asset(
-              "${image}",
+              "${widget.image}",
               height: 368,
               fit: BoxFit.cover,
               width: double.maxFinite,
@@ -108,33 +117,13 @@ class HomeScreenCard extends StatelessWidget {
                         color: GlobalColors.whiteColor,
                         fontWeight: FontWeight.w400),
                     Row(
-                      children: [
-                        Icon(
+                      children: List.generate(5, (index){
+                        return Icon(
                           Icons.grade,
                           color: Colors.yellow,
                           size: 14,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 14,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 14,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Colors.yellow,
-                          size: 14,
-                        ),
-                        Icon(
-                          Icons.star,
-                          color: Color(0xffFFFFFF),
-                          size: 14,
-                        ),
-                      ],
+                        );
+                      })
                     ),
                   ],
                 ),
@@ -142,11 +131,12 @@ class HomeScreenCard extends StatelessWidget {
             ),
             Positioned(
               bottom: 10,
-              child: Row(children: [
+              child:
+              Row(children: [
                 Icon(
                   Icons.circle,
                   color: GlobalColors.primaryColor,
-                  size: 15,
+                  size: 12,
                 ),
                 SizedBox(
                   width: 7,
@@ -154,7 +144,7 @@ class HomeScreenCard extends StatelessWidget {
                 Icon(
                   Icons.circle,
                   color: Color(0xff939393),
-                  size: 15,
+                  size: 12,
                 ),
                 SizedBox(
                   width: 7,
@@ -162,7 +152,7 @@ class HomeScreenCard extends StatelessWidget {
                 Icon(
                   Icons.circle,
                   color: Color(0xff939393),
-                  size: 15,
+                  size: 12,
                 ),
                 SizedBox(
                   width: 7,
@@ -170,7 +160,7 @@ class HomeScreenCard extends StatelessWidget {
                 Icon(
                   Icons.circle,
                   color: Color(0xff939393),
-                  size: 15,
+                  size: 12,
                 ),
               ]),
             ),
@@ -180,32 +170,59 @@ class HomeScreenCard extends StatelessWidget {
           ),
           Padding(
             padding: EdgeInsets.only(left: 15, right: 10),
-            child: Row(
+            child:
+            Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   TextWidget(
-                      text: "${hearts} Hearts",
+                      text: "${widget.hearts} Hearts",
                       size: 15,
                       color: Colors.black,
                       fontWeight: FontWeight.w500),
                   SizedBox(
                     width: 20,
                   ),
-                  Icon(
-                    Icons.favorite_outline,
-                    color: GlobalColors.iconColor,
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isFavoriteClicked = !isFavoriteClicked;
+                      });
+                    },
+                    child: Icon(
+                      Icons.favorite_outline,
+                      color: isFavoriteClicked ? Colors.red : GlobalColors.iconColor,
+                    ),
                   ),
                   InkWell(onTap: (){
                     Get.to(CommentsScreen());
+                    setState(() {
+                      isCommentClicked=!isCommentClicked;
+                    });
                   },
-                      child: Image.asset('assets/icons/comment.png', height: 18.sp, width: 18.sp, fit: BoxFit.contain,)),
-                  Icon(
-                    Icons.send,
-                    color: GlobalColors.iconColor,
+                      child:Image.asset('assets/icons/comment.png', height: 20.sp, width: 20.sp, fit: BoxFit.contain,color: isCommentClicked==true?Colors.red:GlobalColors.iconColor),),
+
+
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        isSendClicked = !isSendClicked;
+                      });
+                    },
+                    child: Icon(
+                      Icons.send,
+                      color:  isSendClicked ? Colors.red : GlobalColors.iconColor,
+                    ),
                   ),
-                  Icon(
-                    Icons.bookmark_outline_outlined,
-                    color: GlobalColors.iconColor,
+                  GestureDetector(
+                    onTap: (){
+                        setState(() {
+                          isBookmarkClicked = !isBookmarkClicked;
+                        });
+                    },
+                    child: Icon(
+                      Icons.bookmark_outline_outlined,
+                      color: isBookmarkClicked ? Colors.red : GlobalColors.iconColor,
+                    ),
                   ),
 
 
@@ -213,10 +230,10 @@ class HomeScreenCard extends StatelessWidget {
           ),
           SizedBox(height: 5,),
           Padding(
-            padding: EdgeInsets.only(left: 15
+            padding: EdgeInsets.only(left: 15,bottom: 10
             ),
             child: TextWidget(
-                text: "${comments} Comments",
+                text: "${widget.comments} Comments",
                 size: 12.41,
                 color: Colors.black,
                 fontWeight: FontWeight.w400),

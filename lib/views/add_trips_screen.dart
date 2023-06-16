@@ -71,6 +71,9 @@ class AddTripsScreen extends StatelessWidget {
                         timeTo: '5:30 PM',
                         buttonColor: GlobalColors.primaryColor,
                         buttonText: "Simple",
+                        share: info,
+                        imageHeight: 25,
+                        imageWidth: 25,
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -94,6 +97,9 @@ class AddTripsScreen extends StatelessWidget {
                         timeFrom: '5:30 PM',
                         dateTo: 'Wed, Apr 28 2023',
                         timeTo: '5:30 PM',
+                        share:info ,
+                        imageHeight: 25,
+                        imageWidth: 25,
                         buttonColor: Color(0xff08B88E),
                         buttonText: "Unique",
                         onPressed: () => Navigator.push(

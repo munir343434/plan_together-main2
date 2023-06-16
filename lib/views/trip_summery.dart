@@ -39,7 +39,9 @@ class _TripSummeryState extends State<TripSummery>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Trip Summery", onBackButtonPressed: (){}, onMoreButtonPressed: (){}),
+      appBar: CustomAppBar(title: "Trip Summary", onBackButtonPressed: (){
+        Navigator.pop(context);
+      }, onMoreButtonPressed: (){}),
       body: Column(
         children: [
           Padding(
@@ -50,12 +52,9 @@ class _TripSummeryState extends State<TripSummery>
               timeFrom: '5:30 PM',
               dateTo: 'Wed, Apr 28 2023',
               share: info,
+              imageHeight: 25,
+              imageWidth: 25,
               timeTo: '5:30 PM',
-              onPressed: () => Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => const TripSummery(),
-                  )),
             ),
           ),
           SizedBox(

@@ -12,12 +12,6 @@ class FollowersScreen extends StatefulWidget {
 }
 
 class _FollowersScreenState extends State<FollowersScreen> {
-  List<bool> followStates = [
-    false, // Initial follow state for AzizDjan
-    true,  // Initial follow state for JohnDoe
-    false, // Initial follow state for JaneSmith
-    // Add more initial follow states here
-  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(

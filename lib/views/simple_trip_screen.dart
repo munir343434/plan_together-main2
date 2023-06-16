@@ -12,9 +12,22 @@ import 'package:plan_together/utils/images.dart';
 import 'package:plan_together/widgets/add_new_trip_button.dart';
 import 'package:plan_together/widgets/mainButton.dart';
 
-class SimpleTrip extends StatelessWidget {
+class SimpleTrip extends StatefulWidget {
   const SimpleTrip({super.key});
 
+  @override
+  State<SimpleTrip> createState() => _SimpleTripState();
+}
+
+class _SimpleTripState extends State<SimpleTrip> {
+List<String> text=[
+  "All",
+  "Hotel",
+  "Restaurant",
+  "Attraction",
+  "Waterpark"
+];
+int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -168,154 +181,44 @@ class SimpleTrip extends StatelessWidget {
               SizedBox(
                 height: 30.sp,
                 child: ListView.builder(
-                  itemCount: 1,
+                  itemCount: text.length,
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return Row(
                       children: [
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: GlobalColors.primaryColor,
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 25.sp, right: 25.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'All',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: Colors.white),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Hotel',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Resturant',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Attraction',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Waterpark',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectedIndex = index;
+                            });
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(left: 5),
+                              // width: 127.sp,
+                              height: 24.sp,
+                              decoration: BoxDecoration(
+                                  color: selectedIndex == index ? GlobalColors.primaryColor : GlobalColors.white,
+                                  border: Border.all(color: GlobalColors.primaryColor),
+                                  borderRadius: BorderRadius.circular(43.sp)),
+                              child: Padding(
+                                padding:
+                                    EdgeInsets.only(left: 25.sp, right: 25.sp),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      text[index],
+                                      style: TextStyle(
+                                          fontSize: 12.sp,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily: 'MontserratMedium',
+                                        color: selectedIndex == index ? Colors.white : GlobalColors.primaryColor,),
+                                    )
+                                  ],
+                                ),
+                              )),
                         ),
                       ],
                     );
@@ -501,7 +404,7 @@ class SimpleTrip extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             bottomContainer(image: checklist, color: GlobalColors.green),
-            bottomContainer(image: share, color: GlobalColors.green),
+            bottomContainer(image: share2, color: GlobalColors.green),
             bottomContainer(image: delete, color: Color(0xffFF3333)),
             MainButton(
                 width: 158,

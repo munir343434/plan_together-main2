@@ -229,7 +229,7 @@ class UniqueTrip extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             bottomContainer(image: checklist, color: GlobalColors.green),
-            bottomContainer(image: share, color: GlobalColors.green),
+            bottomContainer(image: share2, color: GlobalColors.green),
             bottomContainer(image: delete, color: Color(0xffFF3333)),
             MainButton(
                 width: 158,

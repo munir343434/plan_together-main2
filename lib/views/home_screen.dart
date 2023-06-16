@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/cards/home_screen_card.dart';
 import 'package:plan_together/utils/global_colors.dart';
 import 'package:plan_together/utils/images.dart';
+import 'package:plan_together/views/Profile_screen.dart';
 import 'package:plan_together/widgets/mainButton.dart';
 import 'package:plan_together/widgets/text_widget.dart';
 
@@ -56,6 +59,9 @@ class _HomeScreenState extends State<HomeScreen> {
                     text: "Start Building my Trip",
                     textFont: FontWeight.w700,
                     textSize: 16,
+                    onPressed: (){
+                      Get.to(ProfileScreen());
+                    },
                     textColor: Colors.white),
                 SizedBox(
                   height: 30,

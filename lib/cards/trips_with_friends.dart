@@ -15,8 +15,8 @@ class TripsWithFriends extends StatelessWidget {
       this.timeTo,
       this.dateTo,
       this.image,
-        this.height,
-        this.width,
+        this.imageHeight,
+        this.imageWidth,
         this.share,
         this.buttonColor,
         this.buttonText,
@@ -24,7 +24,7 @@ class TripsWithFriends extends StatelessWidget {
       : super(key: key);
 
   String? location, image, dateFrom, timeFrom, timeTo, dateTo,buttonText,share;
-  double? height=25.4,width=25.4;
+  double? imageHeight,imageWidth;
   Color? buttonColor;
   VoidCallback? onPressed;
   List<String> _images = [p1, p2, p3, p4, p1, p2, p3, p4, p1];
@@ -41,13 +41,12 @@ class TripsWithFriends extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(
                 left: 28.sp, top: 27.sp, right: 12.6.sp, bottom: 28.sp),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(children: [
                       Text(
@@ -75,108 +74,107 @@ class TripsWithFriends extends StatelessWidget {
                       ),
                     ],),
 
-                    SizedBox(
-                      height: 7.5.sp,
+                  Image.asset(
+                    share??"",
+                    height: imageHeight,
+                    width: imageWidth,
+                  )
+                ],),
+
+                SizedBox(
+                  height: 7.5.sp,
+                ),
+                Row(
+                  children: [
+                    Icon(
+                      Icons.location_pin,
+                      size: 15.sp,
+                      color: GlobalColors.lightGrey,
                     ),
-                    Row(
-                      children: [
-                        Icon(
-                          Icons.location_pin,
-                          size: 15.sp,
-                          color: GlobalColors.lightGrey,
-                        ),
-                        SizedBox(height: 7.4.sp),
-                        Text(
-                          '${location}',
-                          style: TextStyle(
-                              fontSize: 13.2.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'ProximaNovaMedium',
-                              color: Colors.grey),
-                        ),
-                      ],
-                    ),
-                    SizedBox(
-                      height: 8.5.sp,
-                    ),
-                    FlutterImageStack(
-                      imageSource: ImageSource.Asset,
-                      imageList: _images,
-                      // showTotalCount: true,
-                      totalCount: 7,
-                      itemRadius: 26.sp, // Radius of each images
-                      itemCount:
-                          7, // Maximum number of images to be shown in stack
-                      itemBorderWidth: 0.05, // Border width around the images
-                    ),
-                    SizedBox(
-                      height: 10.sp,
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          '${dateFrom}',
-                          style: TextStyle(
-                              fontSize: 9.7.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'ProximaNovaMedium',
-                              color: GlobalColors.darkBlue),
-                        ),
-                        SizedBox(
-                          width: 1.sp,
-                        ),
-                        Text(
-                          '${timeFrom}',
-                          style: TextStyle(
-                              fontSize: 9.7.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'ProximaNovaMedium',
-                              color: GlobalColors.darkBlue),
-                        ),
-                        SizedBox(
-                          width: 3.sp,
-                        ),
-                        Image.asset(
-                          line,
-                          height: 4.5.sp,
-                          width: 19.sp,
-                          fit: BoxFit.contain,
-                        ),
-                        SizedBox(
-                          width: 7.sp,
-                        ),
-                        Text(
-                          '${dateTo}',
-                          style: TextStyle(
-                              fontSize: 9.7.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'ProximaNovaMedium',
-                              color: GlobalColors.darkBlue),
-                        ),
-                        SizedBox(
-                          width: 1.sp,
-                        ),
-                        Text(
-                          '${timeTo}',
-                          style: TextStyle(
-                              fontSize: 9.7.sp,
-                              fontWeight: FontWeight.w400,
-                              fontFamily: 'ProximaNovaMedium',
-                              color: GlobalColors.darkBlue),
-                        ),
-                        SizedBox(
-                          width: 3.sp,
-                        ),
-                      ],
+                    SizedBox(height: 7.4.sp),
+                    Text(
+                      '${location}',
+                      style: TextStyle(
+                          fontSize: 13.2.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'ProximaNovaMedium',
+                          color: Colors.grey),
                     ),
                   ],
                 ),
-                Image.asset(
-                  share??"",
-                  height: height,
-                  width: width,
-                  fit: BoxFit.contain,
-                )
+                SizedBox(
+                  height: 8.5.sp,
+                ),
+                FlutterImageStack(
+                  imageSource: ImageSource.Asset,
+                  imageList: _images,
+                  // showTotalCount: true,
+                  totalCount: 7,
+                  itemRadius: 26.sp, // Radius of each images
+                  itemCount:
+                      7, // Maximum number of images to be shown in stack
+                  itemBorderWidth: 0.05, // Border width around the images
+                ),
+                SizedBox(
+                  height: 10.sp,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      '${dateFrom}',
+                      style: TextStyle(
+                          fontSize: 9.7.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'ProximaNovaMedium',
+                          color: GlobalColors.darkBlue),
+                    ),
+                    SizedBox(
+                      width: 1.sp,
+                    ),
+                    Text(
+                      '${timeFrom}',
+                      style: TextStyle(
+                          fontSize: 9.7.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'ProximaNovaMedium',
+                          color: GlobalColors.darkBlue),
+                    ),
+                    SizedBox(
+                      width: 3.sp,
+                    ),
+                    Image.asset(
+                      line,
+                      height: 4.5.sp,
+                      width: 19.sp,
+                      fit: BoxFit.contain,
+                    ),
+                    SizedBox(
+                      width: 7.sp,
+                    ),
+                    Text(
+                      '${dateTo}',
+                      style: TextStyle(
+                          fontSize: 9.7.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'ProximaNovaMedium',
+                          color: GlobalColors.darkBlue),
+                    ),
+                    SizedBox(
+                      width: 1.sp,
+                    ),
+                    Text(
+                      '${timeTo}',
+                      style: TextStyle(
+                          fontSize: 9.7.sp,
+                          fontWeight: FontWeight.w400,
+                          fontFamily: 'ProximaNovaMedium',
+                          color: GlobalColors.darkBlue),
+                    ),
+                    SizedBox(
+                      width: 3.sp,
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
