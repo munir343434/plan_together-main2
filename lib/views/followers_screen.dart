@@ -33,7 +33,7 @@ class _FollowersScreenState extends State<FollowersScreen> {
                 itemBuilder: (context, index) {
                   return
                     Padding(
-                      padding: EdgeInsets.only(left: 20,right: 20,top: 30),
+                      padding: EdgeInsets.only(left: 10,right: 10,top: 10),
                       child: FollowWidget(
                         name: "AzizDjan", image: p1, userName: "A_AzizDjan",),
                     );

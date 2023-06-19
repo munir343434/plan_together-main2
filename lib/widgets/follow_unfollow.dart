@@ -7,13 +7,12 @@ import 'package:plan_together/widgets/text_widget.dart';
 class FollowWidget extends StatefulWidget {
   String? image, name, userName;
 
-  FollowWidget(
-      {Key? key,
-      required this.name,
-      required this.image,
-
-      required this.userName})
-      : super(key: key);
+  FollowWidget({
+    Key? key,
+    required this.name,
+    required this.image,
+    required this.userName,
+  }) : super(key: key);
 
   @override
   State<FollowWidget> createState() => _FollowWidgetState();
@@ -21,6 +20,7 @@ class FollowWidget extends StatefulWidget {
 
 class _FollowWidgetState extends State<FollowWidget> {
   bool isFollowing = false;
+
   void toggleFollow() {
     setState(() {
       isFollowing = !isFollowing;
@@ -29,47 +29,41 @@ class _FollowWidgetState extends State<FollowWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Row(children: [
-          Container(
-            height: 36.5,
-            width: 36.5,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                image: DecorationImage(
-                    image: AssetImage(widget.image ?? ""), fit: BoxFit.cover)),
+    return ListTile(
+      leading: Container(
+        height: 36.5,
+        width: 36.5,
+        decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          image: DecorationImage(
+            image: AssetImage(widget.image ?? ""),
+            fit: BoxFit.cover,
           ),
-          SizedBox(width: 9,),Column(
-            mainAxisAlignment:MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TextWidget(
-                  text: widget.name??"",
-                  size: 16,
-                  color: GlobalColors.followerNameColor,
-                  fontWeight: FontWeight.w700),
-              TextWidget(
-                  text: widget.userName??"",
-                  size: 16,
-                  color: GlobalColors.followerUserNameColor,
-                  fontWeight: FontWeight.w400)
-            ],
-          ),
-        ],),
-
-        MainButton(
-            height: 32,
-            width:96 ,
-            color:isFollowing ?  Colors.white:GlobalColors.primaryColor,
-            text: isFollowing ? 'Unfollow' : 'Follow',
-            border: Border.all(color: GlobalColors.primaryColor),
-            textColor:isFollowing ?  GlobalColors.primaryColor:Colors.white,
-            textSize: 12,
-            onPressed: toggleFollow,
-            textFont: FontWeight.w700)
-      ],
+        ),
+      ),
+      title: TextWidget(
+        text: widget.name ?? "",
+        size: 16,
+        color: GlobalColors.followerNameColor,
+        fontWeight: FontWeight.w700,
+      ),
+      subtitle: TextWidget(
+        text: widget.userName ?? "",
+        size: 16,
+        color: GlobalColors.followerUserNameColor,
+        fontWeight: FontWeight.w400,
+      ),
+      trailing: MainButton(
+        height: 36,
+        width: 96,
+        textFont:FontWeight.w700 ,
+        textSize: 12,
+        text: isFollowing ? 'Unfollow' : 'Follow',
+        onPressed: toggleFollow,
+        border: Border.all(color: GlobalColors.primaryColor),
+        color: isFollowing ? Colors.white :  GlobalColors.primaryColor,
+        textColor: isFollowing ?GlobalColors.primaryColor :Colors.white  ,
+      ),
     );
   }
 }
