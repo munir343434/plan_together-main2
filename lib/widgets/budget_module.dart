@@ -15,7 +15,7 @@ class BudgetModule extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           MainButton(
-              height: 58,
+              height: 50,
               color: GlobalColors.primaryColor,
               text: "Add Expense",
               textColor: Colors.white,

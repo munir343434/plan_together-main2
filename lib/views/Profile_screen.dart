@@ -111,7 +111,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                       children: [
                         Expanded(
                           child: MainButton(
-                            height: 50,
+                            height: 45,
                             color: GlobalColors.primaryColor,
                             text: "Follow",
                             textColor: Colors.white,
@@ -122,7 +122,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                         SizedBox(width: 6),
                         Expanded(
                           child: MainButton(
-                            height: 50,
+                            height: 45,
                             color: GlobalColors.plusButton,
                             text: "Message",
                             textColor: Colors.white,

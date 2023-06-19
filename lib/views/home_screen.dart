@@ -54,7 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 welcomeWidget(headingText: "Plan Together",subheading: "Build your own Vacation or Trip."),
                 MainButton(
-                    height: 64,
                     color: GlobalColors.primaryColor,
                     text: "Start Building my Trip",
                     textFont: FontWeight.w700,

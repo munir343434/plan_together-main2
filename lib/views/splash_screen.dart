@@ -59,7 +59,7 @@ class SplashScreen extends StatelessWidget {
                     builder: (context) => const LoginScreen(),
                   )),
               child: MainButton(
-                            height: 60.sp,
+
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
                             color: GlobalColors.primaryColor,
@@ -78,7 +78,7 @@ class SplashScreen extends StatelessWidget {
                     builder: (context) => const LoginScreen(),
                   )),
               child: MainButton(
-                            height: 60.sp,
+
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
                             border: Border.all(color: GlobalColors.border),

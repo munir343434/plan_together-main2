@@ -18,7 +18,7 @@ class CreateTrip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        appBar: CustomAppBar(title: 'Create Trip', onBackButtonPressed: () {  }, onMoreButtonPressed: () {  },),
+        appBar: CustomAppBar(title: 'Create Trip', onBackButtonPressed: () {Navigator.pop(context); }, onMoreButtonPressed: () {  },),
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 19.sp),
           child: Column(
@@ -30,7 +30,6 @@ class CreateTrip extends StatelessWidget {
                   Get.to(CreateTrip2());
                 },
                 child: MainButton(
-                    height: 64.sp,
                     textFont: FontWeight.w700,
                     textSize: 16.sp,
                     color: GlobalColors.primaryColor,
@@ -48,7 +47,6 @@ class CreateTrip extends StatelessWidget {
                   Get.to(CreateTrip2());
                 },
                 child: MainButton(
-                    height: 64.sp,
                     textFont: FontWeight.w700,
                     textSize: 16.sp,
                     color: GlobalColors.primaryColor,

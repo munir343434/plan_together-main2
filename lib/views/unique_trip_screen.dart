@@ -155,7 +155,7 @@ class UniqueTrip extends StatelessWidget {
                   SizedBox(
                     height: 30.sp,
                   ),
-                  MainButton(height: 64,
+                  MainButton(
                       color: GlobalColors.primaryColor,
                       text: "Add Things to do",
                       textColor: Colors.white,
@@ -233,7 +233,7 @@ class UniqueTrip extends StatelessWidget {
             bottomContainer(image: delete, color: Color(0xffFF3333)),
             MainButton(
                 width: 158,
-                height: 56,
+                height: 50,
                 color: Color(0xffC1C1C1),
                 text: "Save",
                 textColor: Colors.white,

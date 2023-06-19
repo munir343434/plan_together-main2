@@ -158,7 +158,6 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20),
         child: MainButton(
-            height: 64,
             color: GlobalColors.primaryColor,
             text: "Post Experience",
             textColor: Colors.white,

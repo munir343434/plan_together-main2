@@ -75,7 +75,6 @@ class LoginScreen extends StatelessWidget {
                               builder: (context) => const BottomTabs(),
                             )),
                         child:  MainButton(
-                            height: 64.sp,
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
                             color: GlobalColors.primaryColor,
@@ -111,7 +110,7 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       MainButton(
-                            height: 64.sp,
+
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
                             icon: google,

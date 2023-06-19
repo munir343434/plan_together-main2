@@ -68,7 +68,6 @@ class SignupScreen extends StatelessWidget {
                               builder: (context) => const LoginScreen(),
                             )),
                         child: MainButton(
-                            height: 64.sp,
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
                             color: GlobalColors.primaryColor,

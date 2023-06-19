@@ -18,7 +18,7 @@ class MainButton extends StatefulWidget {
 
   MainButton(
       {Key? key,
-      required this.height,
+   this.height=60,
       this.width,
       required this.color,
       required this.text,

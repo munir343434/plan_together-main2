@@ -130,16 +130,12 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             Divider(thickness: 0.5,),
             Padding(
-              padding: const EdgeInsets.only(left: 14,right: 16,top: 5),
+              padding: const EdgeInsets.only(left: 14,right: 16,top: 5,bottom: 10),
               child: Column(children: [
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Row(
                       children:[
-                        Image.asset("assets/icons/attach.png",height: 30,width: 30,),
-                        SizedBox(
-                          width: 16,
-                        ),
                         Expanded(
                           child: textField(
                               text: "Type a message",

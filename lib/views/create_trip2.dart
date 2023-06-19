@@ -91,7 +91,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                         color: Color(0xff424242),
                         fontWeight: FontWeight.w600),
                     SizedBox(
-                      height: 50,
+                      width: 75,
                     ),
                     TextWidget(
                         text: "Arrival Date",
@@ -100,7 +100,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                         fontWeight: FontWeight.w600),
                   ],
                 ),
-
+               SizedBox(height: 15,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -286,7 +286,6 @@ class _CreateTrip2State extends State<CreateTrip2> {
             Get.offAll(BottomTabs());
           },
           child: MainButton(
-              height: 64,
               color: GlobalColors.primaryColor,
               text: "Create",
               textColor: GlobalColors.whiteColor,
