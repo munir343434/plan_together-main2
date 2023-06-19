@@ -27,12 +27,14 @@ class CreateTrip extends StatelessWidget {
             children: [
               InkWell(
                 onTap: () {
-                  Get.to(CreateTrip2());
+                  Get.to(
+
+                     const CreateTrip2());
                 },
                 child: MainButton(
                     textFont: FontWeight.w700,
                     textSize: 16.sp,
-                    color: GlobalColors.primaryColor,
+                    color: primaryColor,
                     text: 'Simple Trip',
                     smallText:
                         "Fx: Short Trips, Camping, Fishing, Visit Parent in Law",
@@ -44,12 +46,12 @@ class CreateTrip extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Get.to(CreateTrip2());
+                  Get.to(const CreateTrip2());
                 },
                 child: MainButton(
                     textFont: FontWeight.w700,
                     textSize: 16.sp,
-                    color: GlobalColors.primaryColor,
+                    color: primaryColor,
                     text: 'Unique Trip',
                     smallText:
                         "Fx: Require more planning, Vacation to Dubai, Maldives, London e.t.c ",

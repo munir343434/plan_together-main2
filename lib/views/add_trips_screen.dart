@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/cards/hourly_weather.dart';
 import 'package:plan_together/cards/resort_card.dart';
 import 'package:plan_together/cards/trips_with_friends.dart';
@@ -20,7 +22,7 @@ class AddTripsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: GlobalColors.white,
+        backgroundColor: white,
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.only(left: 17.sp, right: 17.sp, top: 10),
@@ -44,11 +46,9 @@ class AddTripsScreen extends StatelessWidget {
                     ),
 
 
-                    AddNewTripButton(text: "Add New Trip", onPressed: (){ Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const CreateTrip(),
-                        ));})
+                    AddNewTripButton(text: "Add New Trip", onPressed: (){
+                      Get.to(CreateTrip());
+                    })
 
                   ],
                 ),
@@ -69,7 +69,7 @@ class AddTripsScreen extends StatelessWidget {
                         timeFrom: '5:30 PM',
                         dateTo: 'Wed, Apr 28 2023',
                         timeTo: '5:30 PM',
-                        buttonColor: GlobalColors.primaryColor,
+                        buttonColor: primaryColor,
                         buttonText: "Simple",
                         share: info,
                         imageHeight: 25,

@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: GlobalColors.whiteColor,
+        backgroundColor: whiteColor,
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.only(left: 17, right: 17, top: 25),
@@ -54,7 +54,7 @@ class _HomeScreenState extends State<HomeScreen> {
               children: [
                 welcomeWidget(headingText: "Plan Together",subheading: "Build your own Vacation or Trip."),
                 MainButton(
-                    color: GlobalColors.primaryColor,
+                    color: primaryColor,
                     text: "Start Building my Trip",
                     textFont: FontWeight.w700,
                     textSize: 16,
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 TextWidget(
                     text: "Community Timline",
                     size: 19.88,
-                    color: GlobalColors.homeBlackColor,
+                    color: homeBlackColor,
                     fontWeight: FontWeight.w600),
                 SizedBox(
                   height: 19,

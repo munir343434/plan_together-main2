@@ -89,7 +89,7 @@ class TripsWithFriends extends StatelessWidget {
                     Icon(
                       Icons.location_pin,
                       size: 15.sp,
-                      color: GlobalColors.lightGrey,
+                      color: lightGrey,
                     ),
                     SizedBox(height: 7.4.sp),
                     Text(
@@ -126,7 +126,7 @@ class TripsWithFriends extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 1.sp,
@@ -137,7 +137,7 @@ class TripsWithFriends extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 3.sp,
@@ -157,7 +157,7 @@ class TripsWithFriends extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 1.sp,
@@ -168,7 +168,7 @@ class TripsWithFriends extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 3.sp,

@@ -44,13 +44,13 @@ class _FollowWidgetState extends State<FollowWidget> {
       title: TextWidget(
         text: widget.name ?? "",
         size: 16,
-        color: GlobalColors.followerNameColor,
+        color: followerNameColor,
         fontWeight: FontWeight.w700,
       ),
       subtitle: TextWidget(
         text: widget.userName ?? "",
         size: 16,
-        color: GlobalColors.followerUserNameColor,
+        color: followerUserNameColor,
         fontWeight: FontWeight.w400,
       ),
       trailing: MainButton(
@@ -60,9 +60,9 @@ class _FollowWidgetState extends State<FollowWidget> {
         textSize: 12,
         text: isFollowing ? 'Unfollow' : 'Follow',
         onPressed: toggleFollow,
-        border: Border.all(color: GlobalColors.primaryColor),
-        color: isFollowing ? Colors.white :  GlobalColors.primaryColor,
-        textColor: isFollowing ?GlobalColors.primaryColor :Colors.white  ,
+        border: Border.all(color: primaryColor),
+        color: isFollowing ? Colors.white :  primaryColor,
+        textColor: isFollowing ?primaryColor :Colors.white  ,
       ),
     );
   }

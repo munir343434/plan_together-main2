@@ -19,13 +19,13 @@ class _CommentsScreenState extends State<CommentsScreen> {
     return Scaffold(
       appBar: AppBar(
           elevation: 0.5,
-          backgroundColor: GlobalColors.whiteColor,
+          backgroundColor: whiteColor,
           leading: Padding(
             padding: EdgeInsets.only(left: 20),
             child: IconButton(
               icon: Icon(
                 Icons.arrow_back_ios_rounded,
-                color: GlobalColors.blackColor,
+                color: blackColor,
               ),
               onPressed: () {
                 Navigator.pop(context);
@@ -35,7 +35,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
           title: TextWidget(
               text: "Comments",
               size: 21.88,
-              color: GlobalColors.homeBlackColor,
+              color: homeBlackColor,
               fontWeight: FontWeight.w700)),
       body: SafeArea(
         child: Column(
@@ -102,7 +102,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
               width: 50,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: GlobalColors.primaryColor),
+                  color: primaryColor),
               child: Center(
                 child: Image.asset(
                   "assets/icons/send.png",

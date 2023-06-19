@@ -42,7 +42,7 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
               TextWidget(
                   text: "Tell us About your trip",
                   size: 29,
-                  color: GlobalColors.homeBlackColor,
+                  color: homeBlackColor,
                   fontWeight: FontWeight.w700),
               SizedBox(
                 height: 11,
@@ -106,7 +106,7 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
                         text: "Add More",
                         onPressed: () {},
                         buttonColor: Colors.white,
-                        textColor: GlobalColors.primaryColor,
+                        textColor: primaryColor,
                       )
                     ],
                   )),
@@ -158,7 +158,7 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(20),
         child: MainButton(
-            color: GlobalColors.primaryColor,
+            color: primaryColor,
             text: "Post Experience",
             textColor: Colors.white,
             textSize: 16,

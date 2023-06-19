@@ -19,7 +19,7 @@ class RecentTrips extends StatelessWidget {
           width: 163,
           height: 135,
           decoration: BoxDecoration(
-            color: GlobalColors.whiteColor,
+            color: whiteColor,
             borderRadius: const BorderRadius.only(
               topLeft: Radius.circular(25),
               topRight: Radius.circular(25),
@@ -33,7 +33,7 @@ class RecentTrips extends StatelessWidget {
         Container(
           width: 163,
           decoration: BoxDecoration(
-              color: GlobalColors.whiteColor,
+              color: whiteColor,
               borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(20),
                 bottomRight: Radius.circular(20),
@@ -46,7 +46,7 @@ class RecentTrips extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                TextWidget(text: cityName, size: 14, color: GlobalColors.blackColor, fontWeight: FontWeight.w700),
+                TextWidget(text: cityName, size: 14, color: blackColor, fontWeight: FontWeight.w700),
                 const SizedBox(
                   height: 5,
                 ),
@@ -55,9 +55,9 @@ class RecentTrips extends StatelessWidget {
                     Icon(
                       Icons.location_on,
                       size: 15,
-                      color:GlobalColors.subHeading ,
+                      color:subHeading ,
                     ),
-                    TextWidget(text: location, size: 10, color: GlobalColors.subHeading, fontWeight: FontWeight.w400)
+                    TextWidget(text: location, size: 10, color: subHeading, fontWeight: FontWeight.w400)
                   ],
                 ),
               ],

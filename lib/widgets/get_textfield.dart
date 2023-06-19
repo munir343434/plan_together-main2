@@ -37,7 +37,7 @@ Widget getTextField(
               EdgeInsets.symmetric(vertical: 23.sp, horizontal: 26.sp):EdgeInsets.symmetric(horizontal: contentPadding.sp,),
           filled: true,
           labelText: label != null ? label : "",
-          labelStyle: TextStyle(color: GlobalColors.grey),
+          labelStyle: TextStyle(color: grey),
           fillColor: Colors.white,
           prefixIcon: image == null
               ? null
@@ -70,11 +70,11 @@ Widget getTextField(
           enabledBorder: OutlineInputBorder(
               borderRadius: borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
-                  BorderSide(color: GlobalColors.border, width: 1.6.sp)),
+                  BorderSide(color: border, width: 1.6.sp)),
           focusedBorder: OutlineInputBorder(
               borderRadius:borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
-                  BorderSide(color: GlobalColors.border, width: 1.6.sp)),
+                  BorderSide(color: border, width: 1.6.sp)),
         )),
   );
 }

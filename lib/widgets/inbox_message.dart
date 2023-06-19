@@ -31,12 +31,12 @@ class _InboxMessageState extends State<InboxMessage> {
               TextWidget(
                   text: "John Harry",
                   size: 16,
-                  color: GlobalColors.homeBlackColor,
+                  color: homeBlackColor,
                   fontWeight: FontWeight.w700),
               TextWidget(
                   text: "11.32 PM",
                   size: 12,
-                  color: GlobalColors.greyColor,
+                  color: greyColor,
                   fontWeight: FontWeight.w400),
 
             ],
@@ -53,12 +53,12 @@ class _InboxMessageState extends State<InboxMessage> {
                 height: 18,
                 width: 18,
                 decoration: BoxDecoration(
-                    shape: BoxShape.circle, color: GlobalColors.primaryColor),
+                    shape: BoxShape.circle, color: primaryColor),
                 child: Center(
                     child: TextWidget(
                         text: "2",
                         size: 12,
-                        color: GlobalColors.whiteColor,
+                        color: whiteColor,
                         fontWeight: FontWeight.w700)),
               )
             ],

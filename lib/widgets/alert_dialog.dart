@@ -77,7 +77,7 @@ class CustomAlertDialog extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 15),
           child: MainButton(
               height: 50,
-              color: GlobalColors.primaryColor,
+              color: primaryColor,
               text: "Add",
               textColor: Colors.white,
               textSize: 15,

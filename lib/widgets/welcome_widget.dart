@@ -26,7 +26,7 @@ Widget welcomeWidget({
                   fontSize: 21.8.sp,
                   fontWeight: FontWeight.w700,
                   fontFamily: 'ProximaNovaMedium',
-                  color: GlobalColors.primaryColor),
+                  color: primaryColor),
             ),
             SizedBox(
               height: 5.3.sp,
@@ -42,7 +42,7 @@ Widget welcomeWidget({
                     fontSize: 12.7.sp,
                     fontWeight: FontWeight.w400,
                     fontFamily: 'ProximaNovaRegular',
-                    color: GlobalColors.grey,
+                    color: grey,
                 ),
               ),
             ),
@@ -60,7 +60,7 @@ Widget welcomeWidget({
               width: 13.3.sp,
             ),
             CircleAvatar(
-              backgroundColor: GlobalColors.grey,
+              backgroundColor: grey,
               maxRadius: 19.5.sp,
               backgroundImage: AssetImage(profile2),
             )

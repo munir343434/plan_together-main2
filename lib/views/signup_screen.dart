@@ -41,7 +41,7 @@ class SignupScreen extends StatelessWidget {
                         fontSize: 14.sp,
                         fontFamily: 'ProximaNovaRegular',
                         fontWeight: FontWeight.w400,
-                        color: GlobalColors.grey),
+                        color: grey),
                   ),
                 ),
                 SizedBox(height: 30.sp),
@@ -70,7 +70,7 @@ class SignupScreen extends StatelessWidget {
                         child: MainButton(
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
-                            color: GlobalColors.primaryColor,
+                            color: primaryColor,
                             text: 'Sign up',
                             // fontFamily: 'ProximaNovaRegular',
                             textColor: Colors.white),
@@ -94,7 +94,7 @@ class SignupScreen extends StatelessWidget {
                 fontSize: 14.sp,
                 fontFamily: 'DMSansRegular',
                 fontWeight: FontWeight.w400,
-                color: GlobalColors.grey,
+                color: grey,
               ),
             ),
             SizedBox(

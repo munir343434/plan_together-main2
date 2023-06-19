@@ -28,12 +28,12 @@ class FlightInformation extends StatelessWidget {
                             TextWidget(
                                 text: "5.50",
                                 size: 22.45,
-                                color: GlobalColors.homeBlackColor,
+                                color: homeBlackColor,
                                 fontWeight: FontWeight.w700),
                             TextWidget(
                                 text: "DEL",
                                 size: 15,
-                                color: GlobalColors.homeBlackColor,
+                                color: homeBlackColor,
                                 fontWeight: FontWeight.w500),
                           ]),
                       Image.asset("assets/images/flight.png"),
@@ -44,12 +44,12 @@ class FlightInformation extends StatelessWidget {
                             TextWidget(
                                 text: "7.30",
                                 size: 22.45,
-                                color: GlobalColors.homeBlackColor,
+                                color: homeBlackColor,
                                 fontWeight: FontWeight.w700),
                             TextWidget(
                                 text: "CCU",
                                 size: 15,
-                                color: GlobalColors.homeBlackColor,
+                                color: homeBlackColor,
                                 fontWeight: FontWeight.w500),
                           ]),
                     ],
@@ -110,7 +110,7 @@ class FlightInformation extends StatelessWidget {
                           TextWidget(
                               text: "IN 230",
                               size: 15,
-                              color: GlobalColors.homeBlackColor,
+                              color: homeBlackColor,
                               fontWeight: FontWeight.w500),
                         ],
                       ),
@@ -129,7 +129,7 @@ class FlightInformation extends StatelessWidget {
                           TextWidget(
                               text: "22",
                               size: 15,
-                              color: GlobalColors.homeBlackColor,
+                              color: homeBlackColor,
                               fontWeight: FontWeight.w500),
                         ],
                       ),
@@ -148,7 +148,7 @@ class FlightInformation extends StatelessWidget {
                           TextWidget(
                               text: "2B",
                               size: 15,
-                              color: GlobalColors.homeBlackColor,
+                              color: homeBlackColor,
                               fontWeight: FontWeight.w500),
                         ],
                       ),
@@ -167,7 +167,7 @@ class FlightInformation extends StatelessWidget {
                           TextWidget(
                               text: "Economy",
                               size: 15,
-                              color: GlobalColors.homeBlackColor,
+                              color: homeBlackColor,
                               fontWeight: FontWeight.w500),
                         ],
                       ),

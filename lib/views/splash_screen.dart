@@ -46,7 +46,7 @@ class SplashScreen extends StatelessWidget {
                   fontSize: 14.sp,
                   fontFamily: 'ProximaNovaRegular',
                   fontWeight: FontWeight.w400,
-                  color: GlobalColors.grey),
+                  color: grey),
             ),
           ),
           SizedBox(height: 28.sp),
@@ -62,7 +62,7 @@ class SplashScreen extends StatelessWidget {
 
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
-                            color: GlobalColors.primaryColor,
+                            color: primaryColor,
                             text: 'Login',
                             // fontFamily: 'ProximaNovaRegular',
                             textColor: Colors.white),
@@ -81,7 +81,7 @@ class SplashScreen extends StatelessWidget {
 
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
-                            border: Border.all(color: GlobalColors.border),
+                            border: Border.all(color: border),
                             color: Colors.white,
                             text: 'Sign up',
                             // fontFamily: 'ProximaNovaRegular',

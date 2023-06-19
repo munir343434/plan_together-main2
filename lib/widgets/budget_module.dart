@@ -16,7 +16,7 @@ class BudgetModule extends StatelessWidget {
         children: [
           MainButton(
               height: 50,
-              color: GlobalColors.primaryColor,
+              color: primaryColor,
               text: "Add Expense",
               textColor: Colors.white,
               textSize: 14.55,

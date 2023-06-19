@@ -74,7 +74,7 @@ bool selectedAll=false;
                   TextWidget(
                       text: widget.role,
                       size: 12.85,
-                      color: GlobalColors.addMoreItems,
+                      color: addMoreItems,
                       fontWeight: FontWeight.w400),
                 ],
               )
@@ -97,7 +97,7 @@ bool selectedAll=false;
                 TextWidget(
                   text: "Shampoo",
                   size: 15,
-                  color: GlobalColors.primaryColor,
+                  color: primaryColor,
                   fontWeight: FontWeight.w600,
                 ),
                 Row(
@@ -105,7 +105,7 @@ bool selectedAll=false;
                     Transform.scale(
                       scale: 1,
                       child: Checkbox(
-                        activeColor: GlobalColors.primaryColor,
+                        activeColor: primaryColor,
                         value: this.valuefirst,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
@@ -158,7 +158,7 @@ bool selectedAll=false;
                 TextWidget(
                   text: "Sun screen ",
                   size: 15,
-                  color: GlobalColors.primaryColor,
+                  color: primaryColor,
                   fontWeight: FontWeight.w600,
                 ),
                 Row(
@@ -166,7 +166,7 @@ bool selectedAll=false;
                     Transform.scale(
                       scale: 1,
                       child: Checkbox(
-                        activeColor: GlobalColors.primaryColor,
+                        activeColor: primaryColor,
                         value: this.valuesecond,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
@@ -219,7 +219,7 @@ bool selectedAll=false;
                 TextWidget(
                   text: "Camera",
                   size: 15,
-                  color: GlobalColors.primaryColor,
+                  color: primaryColor,
                   fontWeight: FontWeight.w600,
                 ),
                 Row(
@@ -227,7 +227,7 @@ bool selectedAll=false;
                     Transform.scale(
                       scale: 1,
                       child: Checkbox(
-                        activeColor: GlobalColors.primaryColor,
+                        activeColor: primaryColor,
                         value: this.valuethird,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
@@ -287,7 +287,7 @@ bool selectedAll=false;
                     TextWidget(
                       text: item,
                       size: 15,
-                      color: GlobalColors.primaryColor,
+                      color: primaryColor,
                       fontWeight: FontWeight.w600,
                     ),
                     Row(
@@ -295,7 +295,7 @@ bool selectedAll=false;
                         Transform.scale(
                           scale: 1,
                           child: Checkbox(
-                            activeColor: GlobalColors.primaryColor,
+                            activeColor: primaryColor,
                             value:checkboxStateList || selectedAll,
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.all(

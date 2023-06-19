@@ -35,7 +35,7 @@ class _CalendarTextFieldState extends State<CalendarTextField> {
           focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: Color(0XFFE6E8E7),
             ),
-          ), prefixIcon: Icon(Icons.date_range_outlined,size: 20,color:GlobalColors.blackColor,),
+          ), prefixIcon: Icon(Icons.date_range_outlined,size: 20,color:blackColor,),
           border: new OutlineInputBorder(
               borderSide:BorderSide(color: Color(0XFFE6E8E7)) ,
               borderRadius: BorderRadius.circular(10)

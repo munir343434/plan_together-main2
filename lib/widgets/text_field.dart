@@ -21,7 +21,7 @@ Widget textField({
     prefixIcon: Icon(
       prefixIcon,
       size: 30,
-      color: GlobalColors.primaryColor,
+      color: primaryColor,
     ),
   ));
 }

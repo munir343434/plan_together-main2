@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/utils/images.dart';
 import 'package:plan_together/views/create_trip.dart';
 import 'package:plan_together/widgets/add_new_trip_button.dart';
@@ -24,7 +26,7 @@ class _AiBotState extends State<AiBot> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: GlobalColors.backgroundColor,
+        backgroundColor: backgroundColor,
         body: SingleChildScrollView(
           child: Padding(
             padding: EdgeInsets.only(left: 17, top: 25.sp),
@@ -38,18 +40,13 @@ class _AiBotState extends State<AiBot> {
                     TextWidget(
                         text: "Recent Trips",
                         size: 19.88,
-                        color: GlobalColors.homeBlackColor,
+                        color: homeBlackColor,
                         fontWeight: FontWeight.w600),
-                    InkWell(
-                      onTap: () => Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const CreateTrip(),
-                          )),
-                      child: Padding(
-                        padding: EdgeInsets.only(right: 17),
-                        child: AddNewTripButton(text: "Add New Trip",onPressed: (){},)
-                      ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 17),
+                      child: AddNewTripButton(text: "Add New Trip",onPressed: (){
+                        Get.to(const CreateTrip());
+                      },)
                     )
                   ],
                 ),
@@ -94,7 +91,7 @@ class _AiBotState extends State<AiBot> {
                       TextWidget(
                           text: "Chat With AI Bot",
                           size: 19,
-                          color: GlobalColors.homeBlackColor,
+                          color: homeBlackColor,
                           fontWeight: FontWeight.w600),
                       SizedBox(
                         height: 26,

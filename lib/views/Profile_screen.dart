@@ -71,7 +71,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                         TextWidget(
                           text: "Cameron stewart",
                           size: 21.88,
-                          color: GlobalColors.homeBlackColor,
+                          color: homeBlackColor,
                           fontWeight: FontWeight.w600,
                         ),
                         SizedBox(height: 5),
@@ -80,7 +80,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                             TextWidget(
                               text: "France",
                               size: 12,
-                              color: GlobalColors.homeBlackColor,
+                              color: homeBlackColor,
                               fontWeight: FontWeight.w600,
                             ),
                             SizedBox(width: 5),
@@ -112,7 +112,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                         Expanded(
                           child: MainButton(
                             height: 45,
-                            color: GlobalColors.primaryColor,
+                            color: primaryColor,
                             text: "Follow",
                             textColor: Colors.white,
                             textSize: 16,
@@ -123,7 +123,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                         Expanded(
                           child: MainButton(
                             height: 45,
-                            color: GlobalColors.plusButton,
+                            color: plusButton,
                             text: "Message",
                             textColor: Colors.white,
                             textSize: 16,
@@ -135,11 +135,11 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                   ),
                   TabBar(
                     isScrollable: true,
-                    indicatorColor: GlobalColors.primaryColor,
+                    indicatorColor: primaryColor,
                     indicatorWeight: 2,
                     controller: _tabController,
                     labelPadding: EdgeInsets.symmetric(horizontal: 50.0),
-                    labelColor: GlobalColors.primaryColor,
+                    labelColor: primaryColor,
                     unselectedLabelColor: Color(0xff7B7B7B),
                     indicatorPadding: EdgeInsets.symmetric(horizontal: 30.0),
                     labelStyle: TextStyle(
@@ -185,7 +185,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                             timeFrom: '5:30 PM',
                             dateTo: 'Wed, Apr 28 2023',
                             timeTo: '5:30 PM',
-                            buttonColor: GlobalColors.primaryColor,
+                            buttonColor: primaryColor,
                             buttonText: "Simple",
                             share: info,
                             imageHeight: 25,

@@ -25,11 +25,11 @@ class _CreateTrip2State extends State<CreateTrip2> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.2,
-        backgroundColor: GlobalColors.whiteColor,
+        backgroundColor: whiteColor,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_rounded,
-            color: GlobalColors.blackColor,
+            color: blackColor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -42,7 +42,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
             TextWidget(
                 text: "Create Trip",
                 size: 21,
-                color: GlobalColors.homeBlackColor,
+                color: homeBlackColor,
                 fontWeight: FontWeight.w700),
             TextWidget(
                 text: "Simple Trip",
@@ -286,9 +286,9 @@ class _CreateTrip2State extends State<CreateTrip2> {
             Get.offAll(BottomTabs());
           },
           child: MainButton(
-              color: GlobalColors.primaryColor,
+              color: primaryColor,
               text: "Create",
-              textColor: GlobalColors.whiteColor,
+              textColor: whiteColor,
               textSize: 16,
               textFont: FontWeight.w700),
         ),

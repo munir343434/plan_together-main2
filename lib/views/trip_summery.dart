@@ -63,7 +63,7 @@ class _TripSummeryState extends State<TripSummery>
           MainButton(
               width: 127,
               height: 26,
-              color: GlobalColors.primaryColor,
+              color: primaryColor,
               text: "Show on map",
               textColor: Colors.white,
               textSize: 12.42,

@@ -61,7 +61,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
               TextWidget(
                   text: "${widget.username}",
                   size: 14.15,
-                  color: GlobalColors.homeBlackColor,
+                  color: homeBlackColor,
                   fontWeight: FontWeight.w600),
               SizedBox(
                 width: 10,
@@ -69,7 +69,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
               TextWidget(
                   text: "Connect",
                   size: 14,
-                  color: GlobalColors.primaryColor,
+                  color: primaryColor,
                   fontWeight: FontWeight.w400),
             ],
           ),
@@ -114,7 +114,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                     TextWidget(
                         text: "Exp Rate",
                         size: 9,
-                        color: GlobalColors.whiteColor,
+                        color: whiteColor,
                         fontWeight: FontWeight.w400),
                     Row(
                       children: List.generate(5, (index){
@@ -135,7 +135,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
               Row(children: [
                 Icon(
                   Icons.circle,
-                  color: GlobalColors.primaryColor,
+                  color: primaryColor,
                   size: 12,
                 ),
                 SizedBox(
@@ -190,7 +190,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                     },
                     child: Icon(
                       Icons.favorite_outline,
-                      color: isFavoriteClicked ? Colors.red : GlobalColors.iconColor,
+                      color: isFavoriteClicked ? Colors.red : iconColor,
                     ),
                   ),
                   InkWell(onTap: (){
@@ -199,7 +199,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                       isCommentClicked=!isCommentClicked;
                     });
                   },
-                      child:Image.asset('assets/icons/comment.png', height: 20.sp, width: 20.sp, fit: BoxFit.contain,color: isCommentClicked==true?Colors.red:GlobalColors.iconColor),),
+                      child:Image.asset('assets/icons/comment.png', height: 20.sp, width: 20.sp, fit: BoxFit.contain,color: isCommentClicked==true?Colors.red:iconColor),),
 
 
                   GestureDetector(
@@ -210,7 +210,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                     },
                     child: Icon(
                       Icons.send,
-                      color:  isSendClicked ? Colors.red : GlobalColors.iconColor,
+                      color:  isSendClicked ? Colors.red : iconColor,
                     ),
                   ),
                   GestureDetector(
@@ -221,7 +221,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                     },
                     child: Icon(
                       Icons.bookmark_outline_outlined,
-                      color: isBookmarkClicked ? Colors.red : GlobalColors.iconColor,
+                      color: isBookmarkClicked ? Colors.red : iconColor,
                     ),
                   ),
 

@@ -31,7 +31,7 @@ int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: GlobalColors.white,
+      backgroundColor: white,
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.only(left: 17.sp, right: 17.sp,top: 10),
@@ -53,7 +53,7 @@ int selectedIndex = 0;
                       },
                       child: Icon(
                         Icons.arrow_back_ios_rounded,
-                        color: GlobalColors.blackColor,
+                        color: blackColor,
                         size: 20,
                       ),
                     ),
@@ -71,7 +71,7 @@ int selectedIndex = 0;
                             fontSize: 21.8.sp,
                             fontWeight: FontWeight.w700,
                             fontFamily: 'ProximaNovaMedium',
-                            color: GlobalColors.primaryColor),
+                            color: primaryColor),
                       ),
                       SizedBox(
                         height: 5.3.sp,
@@ -82,7 +82,7 @@ int selectedIndex = 0;
                             fontSize: 12.7.sp,
                             fontWeight: FontWeight.w400,
                             fontFamily: 'ProximaNovaRegular',
-                            color: GlobalColors.grey),
+                            color: grey),
                       ),
                     ],
                   ),
@@ -98,7 +98,7 @@ int selectedIndex = 0;
                         width: 13.3.sp,
                       ),
                       CircleAvatar(
-                        backgroundColor: GlobalColors.grey,
+                        backgroundColor: grey,
                         maxRadius: 19.5.sp,
                         backgroundImage: AssetImage(profile2),
                       )
@@ -125,7 +125,7 @@ int selectedIndex = 0;
               //       height: 31.sp,
               //       width: 114.sp,
               //       decoration: BoxDecoration(
-              //           color: GlobalColors.primaryColor,
+              //           color: primaryColor,
               //           borderRadius: BorderRadius.circular(23.1.sp)),
               //       child: Row(
               //         mainAxisAlignment: MainAxisAlignment.center,
@@ -145,7 +145,7 @@ int selectedIndex = 0;
               //           Icon(
               //             Icons.add,
               //             size: 12.sp,
-              //             color: GlobalColors.white,
+              //             color: white,
               //           )
               //         ],
               //       ),
@@ -162,7 +162,7 @@ int selectedIndex = 0;
                 dateTo: 'Wed, Apr 28 2023',
                 timeTo: '5:30 PM',
                 buttonText: "Simple",
-                buttonColor: GlobalColors.primaryColor,
+                buttonColor: primaryColor,
               ),
               SizedBox(
                 height: 20.sp,
@@ -198,8 +198,8 @@ int selectedIndex = 0;
                               // width: 127.sp,
                               height: 24.sp,
                               decoration: BoxDecoration(
-                                  color: selectedIndex == index ? GlobalColors.primaryColor : GlobalColors.white,
-                                  border: Border.all(color: GlobalColors.primaryColor),
+                                  color: selectedIndex == index ? primaryColor : white,
+                                  border: Border.all(color: primaryColor),
                                   borderRadius: BorderRadius.circular(43.sp)),
                               child: Padding(
                                 padding:
@@ -214,7 +214,7 @@ int selectedIndex = 0;
                                           fontSize: 12.sp,
                                           fontWeight: FontWeight.w500,
                                           fontFamily: 'MontserratMedium',
-                                        color: selectedIndex == index ? Colors.white : GlobalColors.primaryColor,),
+                                        color: selectedIndex == index ? Colors.white : primaryColor,),
                                     )
                                   ],
                                 ),
@@ -234,7 +234,7 @@ int selectedIndex = 0;
                     fontSize: 17.8.sp,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'ProximaNovaSemiBold',
-                    color: GlobalColors.primaryColor),
+                    color: primaryColor),
               ),
               SizedBox(
                 height: 1.sp,
@@ -242,7 +242,7 @@ int selectedIndex = 0;
               SizedBox(
                   width: 120.sp,
                   child: Divider(
-                      color: GlobalColors.primaryColor, thickness: 1.5)),
+                      color: primaryColor, thickness: 1.5)),
               SizedBox(
                 height: 13.sp,
               ),
@@ -284,7 +284,7 @@ int selectedIndex = 0;
                     fontSize: 17.8.sp,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'ProximaNovaSemiBold',
-                    color: GlobalColors.primaryColor),
+                    color: primaryColor),
               ),
               SizedBox(
                 height: 1.sp,
@@ -292,7 +292,7 @@ int selectedIndex = 0;
               SizedBox(
                   width: 147.sp,
                   child: Divider(
-                      color: GlobalColors.primaryColor, thickness: 1.5)),
+                      color: primaryColor, thickness: 1.5)),
               SizedBox(
                 height: 23.sp,
               ),
@@ -403,13 +403,13 @@ int selectedIndex = 0;
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            bottomContainer(image: checklist, color: GlobalColors.green),
-            bottomContainer(image: share2, color: GlobalColors.green),
+            bottomContainer(image: checklist, color: green),
+            bottomContainer(image: share2, color: green),
             bottomContainer(image: delete, color: Color(0xffFF3333)),
             MainButton(
                 width: 158,
                 height: 56,
-                color: GlobalColors.primaryColor,
+                color: primaryColor,
                 text: "Save",
                 textColor: Colors.white,
                 textSize: 16,

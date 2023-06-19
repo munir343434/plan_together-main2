@@ -22,7 +22,7 @@ class HourlyWeather extends StatelessWidget {
         onTap: onPressed,
         child: Card(
           elevation: 3,
-          shadowColor: GlobalColors.primaryColor,
+          shadowColor: primaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4.sp),
           ),
@@ -31,7 +31,7 @@ class HourlyWeather extends StatelessWidget {
             width: 78.sp,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(4.sp),
-              color: GlobalColors.skyBlue
+              color: skyBlue
             ),
             child: Padding(
               padding: EdgeInsets.symmetric(vertical: 12.sp),

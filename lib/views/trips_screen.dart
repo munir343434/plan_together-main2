@@ -15,7 +15,7 @@ class TripsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: GlobalColors.white,
+      backgroundColor: white,
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.only(left: 17.sp, right: 17.sp, top: 10),
