@@ -18,13 +18,13 @@ class _ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: GlobalColors.whiteColor,
+        backgroundColor: whiteColor,
         elevation: 0.5,
         leading: Padding(
           padding: EdgeInsets.only(left: 20),
           child: IconButton(
             icon: Icon(Icons.arrow_back_ios_new_outlined),
-            color: GlobalColors.blackColor,
+            color: blackColor,
             onPressed: () => Navigator.of(context).pop(),
           ),
         ),
@@ -48,7 +48,7 @@ class _ChatScreenState extends State<ChatScreen> {
               TextWidget(
                   text: "Ashley",
                   size: 16.19,
-                  color: GlobalColors.homeBlackColor,
+                  color: homeBlackColor,
                   fontWeight: FontWeight.w500),
               TextWidget(
                   text: "Online",
@@ -63,13 +63,13 @@ class _ChatScreenState extends State<ChatScreen> {
               onPressed: () {},
               icon: Icon(
                 Icons.phone_enabled_sharp,
-                color: GlobalColors.blackColor,
+                color: blackColor,
               )),
           IconButton(
               onPressed: () {},
               icon: Icon(
                 Icons.more_vert,
-                color: GlobalColors.blackColor,
+                color: blackColor,
               )),
         ],
       ),
@@ -130,16 +130,12 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
             Divider(thickness: 0.5,),
             Padding(
-              padding: const EdgeInsets.only(left: 14,right: 16,top: 5),
+              padding: const EdgeInsets.only(left: 14,right: 16,top: 5,bottom: 10),
               child: Column(children: [
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Row(
                       children:[
-                        Image.asset("assets/icons/attach.png",height: 30,width: 30,),
-                        SizedBox(
-                          width: 16,
-                        ),
                         Expanded(
                           child: textField(
                               text: "Type a message",
@@ -153,7 +149,7 @@ class _ChatScreenState extends State<ChatScreen> {
                           width: 50,
                           decoration: BoxDecoration(
                               shape: BoxShape.circle,
-                              color: GlobalColors.primaryColor
+                              color: primaryColor
                           ),child: Center(
                           child: Image.asset("assets/icons/send3.png",width: 30,height: 30,),
                         ),

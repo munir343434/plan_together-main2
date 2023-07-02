@@ -35,7 +35,7 @@ class Currency extends StatelessWidget {
               TextWidget(
                   text: currency,
                   size: 18.53,
-                  color: GlobalColors.primaryColor,
+                  color: primaryColor,
                   fontWeight: FontWeight.w600),
             ],
           ),

@@ -41,7 +41,7 @@ class ResortCard extends StatelessWidget {
                     height: 31.sp,
                     width: 31.sp,
                     decoration: BoxDecoration(
-                      color: GlobalColors.green,
+                      color: green,
                       borderRadius: BorderRadius.circular(100)
                     ),
                     child: Icon(Icons.add, color: Colors.white, size: 18.sp,),
@@ -54,7 +54,7 @@ class ResortCard extends StatelessWidget {
                     height: 31.sp,
                     width: 31.sp,
                     decoration: BoxDecoration(
-                      color: GlobalColors.pink,
+                      color: pink,
                       borderRadius: BorderRadius.circular(100)
                     ),
                     child: Icon(Icons.remove, color: Colors.white, size: 18.sp,),
@@ -140,7 +140,7 @@ class ResortCard extends StatelessWidget {
                                             fontSize: 8.3.sp,
                                             fontWeight: FontWeight.w400,
                                             fontFamily: 'ProximaNovaRegular',
-                                            color: GlobalColors.primaryColor),
+                                            color: primaryColor),
                                       ),
                                     ],
                                   ),
@@ -156,7 +156,7 @@ class ResortCard extends StatelessWidget {
                                     fontSize: 9.sp,
                                     fontWeight: FontWeight.w400,
                                     fontFamily: 'ProximaNovaRegular',
-                                    color: GlobalColors.greyText),
+                                    color: greyText),
                               ),
                             ),
                           ],

@@ -28,12 +28,12 @@ class InboxMessageYesterday extends StatelessWidget {
               TextWidget(
                   text: "John Harry",
                   size: 16,
-                  color: GlobalColors.homeBlackColor,
+                  color: homeBlackColor,
                   fontWeight: FontWeight.w700),
               TextWidget(
                   text: "Yesterday",
                   size: 12,
-                  color: GlobalColors.greyColor,
+                  color: greyColor,
                   fontWeight: FontWeight.w400),
             ],
           ),

@@ -23,7 +23,7 @@ class _WeatherWidgetState extends State<WeatherWidget> {
         children: [
           WeatherMain(time:"3.30PM" ,date: "Monday, December 20, 2021",image:cloud1 ,temp: "18º C",description:"Cloudy Rain" ,lastUpdated:"Last updated 3.00 PM" ,onPressed:(){} ,),
          SizedBox(height: 24,),
-          TextWidget(text: "Hourly Weather", size: 20, color: GlobalColors.blackColor, fontWeight: FontWeight.w500),
+          TextWidget(text: "Hourly Weather", size: 20, color: blackColor, fontWeight: FontWeight.w500),
           SizedBox(height: 16,),
           Row(children: [
             HourlyWeather(time: "4.00PM",image:cloud2 ,temp: "20º",onPressed: (){},),

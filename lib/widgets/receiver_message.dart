@@ -28,7 +28,7 @@ class ReceiverMessage extends StatelessWidget {
               child: TextWidget(
                   text:text??"",
                   size: 14.82,
-                  color: GlobalColors.homeBlackColor,
+                  color: homeBlackColor,
                   fontWeight: FontWeight.w400),
             ):
               Container(
@@ -50,7 +50,7 @@ class ReceiverMessage extends StatelessWidget {
           SizedBox(height: 10,)  ,
           TextWidget(text: time??"", size: 12.7, color: Color(0xffADB3BC), fontWeight: FontWeight.w400),
           SizedBox(width: 5,),
-          Icon(icon,size: 15,color: GlobalColors.primaryColor,)
+          Icon(icon,size: 15,color: primaryColor,)
         ],)
          ] );
   }

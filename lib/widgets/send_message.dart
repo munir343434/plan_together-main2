@@ -33,7 +33,7 @@ class SenderMessage extends StatelessWidget {
                 padding: EdgeInsets.all(12),
                 width: text.characters.length>15?200:130,
                 decoration: BoxDecoration(
-                    color: GlobalColors.primaryColor,
+                    color: primaryColor,
                     borderRadius: BorderRadius.only(
                         bottomRight: Radius.circular(15),
                         topRight: Radius.circular(10),
@@ -41,7 +41,7 @@ class SenderMessage extends StatelessWidget {
                 child: TextWidget(
                     text:text,
                     size: 14.82,
-                    color: GlobalColors.whiteColor,
+                    color: whiteColor,
                     fontWeight: FontWeight.w400),
               ),
     SizedBox(height: 10,),

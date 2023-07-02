@@ -17,7 +17,7 @@ class AddNewTrip extends StatelessWidget {
         height: 31.sp,
         width: 114.sp,
         decoration: BoxDecoration(
-            color: GlobalColors.primaryColor,
+            color: primaryColor,
             borderRadius: BorderRadius.circular(23.1.sp)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -37,7 +37,7 @@ class AddNewTrip extends StatelessWidget {
             Icon(
               Icons.add,
               size: 12.sp,
-              color: GlobalColors.white,
+              color: white,
             )
           ],
         ),

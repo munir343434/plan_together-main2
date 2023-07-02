@@ -34,7 +34,7 @@ class _SearchInboxState extends State<SearchInbox> {
               TextWidget(
                   text: "Inbox",
                   size: 19.88,
-                  color: GlobalColors.homeBlackColor,
+                  color: homeBlackColor,
                   fontWeight: FontWeight.w600),
               SizedBox(
                 height: 21,

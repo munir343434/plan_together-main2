@@ -19,7 +19,7 @@ class UniqueTrip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: GlobalColors.white,
+      backgroundColor: white,
       body: SafeArea(
           child: Padding(
             padding: EdgeInsets.only(left: 17.sp, right: 17.sp,top: 10),
@@ -41,7 +41,7 @@ class UniqueTrip extends StatelessWidget {
                           },
                           child: Icon(
                             Icons.arrow_back_ios_rounded,
-                            color: GlobalColors.blackColor,
+                            color: blackColor,
                             size: 20,
                           ),
                         ),
@@ -59,7 +59,7 @@ class UniqueTrip extends StatelessWidget {
                                 fontSize: 21.8.sp,
                                 fontWeight: FontWeight.w700,
                                 fontFamily: 'ProximaNovaMedium',
-                                color: GlobalColors.primaryColor),
+                                color: primaryColor),
                           ),
                           SizedBox(
                             height: 5.3.sp,
@@ -70,7 +70,7 @@ class UniqueTrip extends StatelessWidget {
                                 fontSize: 12.7.sp,
                                 fontWeight: FontWeight.w400,
                                 fontFamily: 'ProximaNovaRegular',
-                                color: GlobalColors.grey),
+                                color: grey),
                           ),
                         ],
                       ),
@@ -86,7 +86,7 @@ class UniqueTrip extends StatelessWidget {
                             width: 13.3.sp,
                           ),
                           CircleAvatar(
-                            backgroundColor: GlobalColors.grey,
+                            backgroundColor: grey,
                             maxRadius: 19.5.sp,
                             backgroundImage: AssetImage(profile2),
                           )
@@ -113,7 +113,7 @@ class UniqueTrip extends StatelessWidget {
                   //       height: 31.sp,
                   //       width: 114.sp,
                   //       decoration: BoxDecoration(
-                  //           color: GlobalColors.primaryColor,
+                  //           color: primaryColor,
                   //           borderRadius: BorderRadius.circular(23.1.sp)),
                   //       child: Row(
                   //         mainAxisAlignment: MainAxisAlignment.center,
@@ -133,7 +133,7 @@ class UniqueTrip extends StatelessWidget {
                   //           Icon(
                   //             Icons.add,
                   //             size: 12.sp,
-                  //             color: GlobalColors.white,
+                  //             color: white,
                   //           )
                   //         ],
                   //       ),
@@ -155,8 +155,8 @@ class UniqueTrip extends StatelessWidget {
                   SizedBox(
                     height: 30.sp,
                   ),
-                  MainButton(height: 64,
-                      color: GlobalColors.primaryColor,
+                  MainButton(
+                      color: primaryColor,
                       text: "Add Things to do",
                       textColor: Colors.white,
                       textSize: 16,
@@ -167,14 +167,6 @@ class UniqueTrip extends StatelessWidget {
                   TextWidget(text: "Top 10 Attractions based on city ", size: 20, color: Color(0xff101018), fontWeight: FontWeight.w600),
                   SizedBox(
                     height: 20.sp,
-                  ),
-                  ResortCardNew(
-                    image: dubai1,
-                    title: 'Legoland Dubai Resort',
-                    date: '23/09/2023',
-                    distance: '46km',
-                    description:
-                    'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
                   ),
                   ListView.builder(
                       itemCount: 4,
@@ -187,6 +179,8 @@ class UniqueTrip extends StatelessWidget {
                           date: '23/09/2023',
                           distance: '46km',
                           onPressed: () {},
+                          icon: Icons.add,
+                          iconButtonColor: plusButton,
                           description:
                           'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
                         );
@@ -234,12 +228,12 @@ class UniqueTrip extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            bottomContainer(image: checklist, color: GlobalColors.green),
-            bottomContainer(image: share, color: GlobalColors.green),
+            bottomContainer(image: checklist, color: green),
+            bottomContainer(image: share2, color: green),
             bottomContainer(image: delete, color: Color(0xffFF3333)),
             MainButton(
                 width: 158,
-                height: 56,
+                height: 50,
                 color: Color(0xffC1C1C1),
                 text: "Save",
                 textColor: Colors.white,

@@ -25,11 +25,11 @@ class _CreateTrip2State extends State<CreateTrip2> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0.2,
-        backgroundColor: GlobalColors.whiteColor,
+        backgroundColor: whiteColor,
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back_ios_rounded,
-            color: GlobalColors.blackColor,
+            color: blackColor,
           ),
           onPressed: () {
             Navigator.pop(context);
@@ -42,10 +42,10 @@ class _CreateTrip2State extends State<CreateTrip2> {
             TextWidget(
                 text: "Create Trip",
                 size: 21,
-                color: GlobalColors.homeBlackColor,
+                color: homeBlackColor,
                 fontWeight: FontWeight.w700),
             TextWidget(
-                text: "Quick Trip",
+                text: "Simple Trip",
                 size: 13,
                 color: Color(0XFF797979),
                 fontWeight: FontWeight.w600)
@@ -91,7 +91,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                         color: Color(0xff424242),
                         fontWeight: FontWeight.w600),
                     SizedBox(
-                      height: 50,
+                      width: 75,
                     ),
                     TextWidget(
                         text: "Arrival Date",
@@ -100,7 +100,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                         fontWeight: FontWeight.w600),
                   ],
                 ),
-
+               SizedBox(height: 15,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -286,10 +286,9 @@ class _CreateTrip2State extends State<CreateTrip2> {
             Get.offAll(BottomTabs());
           },
           child: MainButton(
-              height: 64,
-              color: GlobalColors.primaryColor,
+              color: primaryColor,
               text: "Create",
-              textColor: GlobalColors.whiteColor,
+              textColor: whiteColor,
               textSize: 16,
               textFont: FontWeight.w700),
         ),

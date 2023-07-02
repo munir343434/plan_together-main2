@@ -78,7 +78,7 @@ class TripsWithFriendsSimple extends StatelessWidget {
                     Icon(
                       Icons.location_pin,
                       size: 15.sp,
-                      color: GlobalColors.lightGrey,
+                      color: lightGrey,
                     ),
                     SizedBox(height: 7.4.sp),
                     Text(
@@ -116,7 +116,7 @@ class TripsWithFriendsSimple extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 1.sp,
@@ -127,7 +127,7 @@ class TripsWithFriendsSimple extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 3.sp,
@@ -147,7 +147,7 @@ class TripsWithFriendsSimple extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 1.sp,
@@ -158,7 +158,7 @@ class TripsWithFriendsSimple extends StatelessWidget {
                           fontSize: 9.7.sp,
                           fontWeight: FontWeight.w400,
                           fontFamily: 'ProximaNovaMedium',
-                          color: GlobalColors.darkBlue),
+                          color: darkBlue),
                     ),
                     SizedBox(
                       width: 3.sp,

@@ -15,7 +15,7 @@ class TripsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: GlobalColors.white,
+      backgroundColor: white,
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.only(left: 17.sp, right: 17.sp, top: 10),
@@ -104,6 +104,9 @@ class TripsScreen extends StatelessWidget {
                         timeFrom: '5:30 PM',
                         dateTo: 'Wed, Apr 28 2023',
                         timeTo: '5:30 PM',
+                        share: info,
+                        imageWidth: 25,
+                        imageHeight: 25,
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(

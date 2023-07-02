@@ -41,8 +41,8 @@ class _BottomTabsState extends State<BottomTabs> {
               child: Image.asset(
                 _currentIndex == 0 ? bt1 : bt1,
                 color: _currentIndex == 0
-                    ? GlobalColors.primaryColor
-                    : GlobalColors.grey,
+                    ? primaryColor
+                    : grey,
                 height: 24.sp,
                 width: 24.sp,
                 fit: BoxFit.contain,
@@ -57,8 +57,8 @@ class _BottomTabsState extends State<BottomTabs> {
               child: Image.asset(
                 _currentIndex == 1 ? bt2 : bt2,
                 color: _currentIndex == 1
-                    ? GlobalColors.primaryColor
-                    : GlobalColors.grey,
+                    ? primaryColor
+                    : grey,
                 height: 26.sp,
                 width: 28.sp,
                 fit: BoxFit.contain,
@@ -72,8 +72,8 @@ class _BottomTabsState extends State<BottomTabs> {
               child: Image.asset(
                 _currentIndex == 2 ? bt3 : bt3,
                 color: _currentIndex == 2
-                    ? GlobalColors.primaryColor
-                    : GlobalColors.grey,
+                    ? primaryColor
+                    : grey,
                 height: 26.2.sp,
                 width: 33.sp,
                 fit: BoxFit.contain,
@@ -87,8 +87,8 @@ class _BottomTabsState extends State<BottomTabs> {
               child: Image.asset(
                 _currentIndex == 3 ? bt4 : bt4,
                 color: _currentIndex == 3
-                    ? GlobalColors.primaryColor
-                    : GlobalColors.grey,
+                    ? primaryColor
+                    : grey,
                 height: 24.sp,
                 width: 23.sp,
                 fit: BoxFit.contain,
@@ -102,8 +102,8 @@ class _BottomTabsState extends State<BottomTabs> {
               child: Image.asset(
                 _currentIndex == 4 ? bt5 : bt5,
                 color: _currentIndex == 4
-                    ? GlobalColors.primaryColor
-                    : GlobalColors.grey,
+                    ? primaryColor
+                    : grey,
                 height: 30.sp,
                 width: 30.sp,
                 fit: BoxFit.contain,
@@ -114,8 +114,8 @@ class _BottomTabsState extends State<BottomTabs> {
         ],
         selectedLabelStyle: TextStyle(fontSize: 9.6.sp),
         unselectedLabelStyle: TextStyle(fontSize: 9.6.sp),
-        selectedItemColor: GlobalColors.primaryColor,
-        unselectedItemColor: GlobalColors.grey,
+        selectedItemColor: primaryColor,
+        unselectedItemColor: grey,
         onTap: (index) {
           setState(() {
             _currentIndex = index;

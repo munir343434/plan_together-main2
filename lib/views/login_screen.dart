@@ -42,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                         fontSize: 14.sp,
                         fontFamily: 'ProximaNovaRegular',
                         fontWeight: FontWeight.w400,
-                        color: GlobalColors.grey),
+                        color: grey),
                   ),
                 ),
                 SizedBox(height: 41.sp),
@@ -64,7 +64,7 @@ class LoginScreen extends StatelessWidget {
                                   fontSize: 14.sp,
                                   fontWeight: FontWeight.w400,
                                   fontFamily: 'DMSansRegular',
-                                  color: GlobalColors.lightBlue),
+                                  color: lightBlue),
                             ),
                           )),
                       SizedBox(height: 31.sp),
@@ -75,10 +75,9 @@ class LoginScreen extends StatelessWidget {
                               builder: (context) => const BottomTabs(),
                             )),
                         child:  MainButton(
-                            height: 64.sp,
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
-                            color: GlobalColors.primaryColor,
+                            color: primaryColor,
                             text: 'Login',
                             // fontFamily: 'ProximaNovaRegular',
                             textColor: Colors.white),
@@ -90,7 +89,7 @@ class LoginScreen extends StatelessWidget {
                           children: [
                             Expanded(
                                 child: Divider(
-                                    height: 1.sp, color: GlobalColors.border)),
+                                    height: 1.sp, color: border)),
                             Padding(
                               padding: EdgeInsets.symmetric(horizontal: 12.sp),
                               child: Text(
@@ -98,25 +97,25 @@ class LoginScreen extends StatelessWidget {
                                 style: TextStyle(
                                     fontSize: 14.sp,
                                     fontWeight: FontWeight.w400,
-                                    color: GlobalColors.grey,
+                                    color: grey,
                                     fontFamily: 'ProximaNovaRegular'),
                               ),
                             ),
                             Expanded(
                                 child: Divider(
                               height: 1.sp,
-                              color: GlobalColors.border,
+                              color: border,
                             )),
                           ],
                         ),
                       ),
                       MainButton(
-                            height: 64.sp,
+
                             textFont: FontWeight.w700,
                             textSize: 16.sp,
                             icon: google,
-                            border: Border.all(color: GlobalColors.border),
-                            color: GlobalColors.white,
+                            border: Border.all(color: border),
+                            color: white,
                             text: 'Login with Google',
                             // fontFamily: 'ProximaNovaRegular',
                             textColor: Colors.black),
@@ -139,7 +138,7 @@ class LoginScreen extends StatelessWidget {
                 fontSize: 14.sp,
                 fontFamily: 'DMSansRegular',
                 fontWeight: FontWeight.w400,
-                color: GlobalColors.grey,
+                color: grey,
               ),
             ),
             SizedBox(

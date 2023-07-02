@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:plan_together/views/Profile_screen.dart';
+import 'package:plan_together/views/add_trips_screen.dart';
+import 'package:plan_together/views/followers_screen.dart';
+import 'package:plan_together/views/rating_for_trip.dart';
 import 'package:plan_together/views/splash_screen.dart';
+import 'package:plan_together/views/trips_screen.dart';
+import 'package:plan_together/widgets/profile.dart';
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {

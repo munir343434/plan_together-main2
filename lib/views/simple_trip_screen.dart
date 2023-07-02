@@ -12,13 +12,26 @@ import 'package:plan_together/utils/images.dart';
 import 'package:plan_together/widgets/add_new_trip_button.dart';
 import 'package:plan_together/widgets/mainButton.dart';
 
-class SimpleTrip extends StatelessWidget {
+class SimpleTrip extends StatefulWidget {
   const SimpleTrip({super.key});
 
   @override
+  State<SimpleTrip> createState() => _SimpleTripState();
+}
+
+class _SimpleTripState extends State<SimpleTrip> {
+List<String> text=[
+  "All",
+  "Hotel",
+  "Restaurant",
+  "Attraction",
+  "Waterpark"
+];
+int selectedIndex = 0;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: GlobalColors.white,
+      backgroundColor: white,
       body: SafeArea(
           child: Padding(
         padding: EdgeInsets.only(left: 17.sp, right: 17.sp,top: 10),
@@ -40,7 +53,7 @@ class SimpleTrip extends StatelessWidget {
                       },
                       child: Icon(
                         Icons.arrow_back_ios_rounded,
-                        color: GlobalColors.blackColor,
+                        color: blackColor,
                         size: 20,
                       ),
                     ),
@@ -58,7 +71,7 @@ class SimpleTrip extends StatelessWidget {
                             fontSize: 21.8.sp,
                             fontWeight: FontWeight.w700,
                             fontFamily: 'ProximaNovaMedium',
-                            color: GlobalColors.primaryColor),
+                            color: primaryColor),
                       ),
                       SizedBox(
                         height: 5.3.sp,
@@ -69,7 +82,7 @@ class SimpleTrip extends StatelessWidget {
                             fontSize: 12.7.sp,
                             fontWeight: FontWeight.w400,
                             fontFamily: 'ProximaNovaRegular',
-                            color: GlobalColors.grey),
+                            color: grey),
                       ),
                     ],
                   ),
@@ -85,7 +98,7 @@ class SimpleTrip extends StatelessWidget {
                         width: 13.3.sp,
                       ),
                       CircleAvatar(
-                        backgroundColor: GlobalColors.grey,
+                        backgroundColor: grey,
                         maxRadius: 19.5.sp,
                         backgroundImage: AssetImage(profile2),
                       )
@@ -112,7 +125,7 @@ class SimpleTrip extends StatelessWidget {
               //       height: 31.sp,
               //       width: 114.sp,
               //       decoration: BoxDecoration(
-              //           color: GlobalColors.primaryColor,
+              //           color: primaryColor,
               //           borderRadius: BorderRadius.circular(23.1.sp)),
               //       child: Row(
               //         mainAxisAlignment: MainAxisAlignment.center,
@@ -132,7 +145,7 @@ class SimpleTrip extends StatelessWidget {
               //           Icon(
               //             Icons.add,
               //             size: 12.sp,
-              //             color: GlobalColors.white,
+              //             color: white,
               //           )
               //         ],
               //       ),
@@ -149,7 +162,7 @@ class SimpleTrip extends StatelessWidget {
                 dateTo: 'Wed, Apr 28 2023',
                 timeTo: '5:30 PM',
                 buttonText: "Simple",
-                buttonColor: GlobalColors.primaryColor,
+                buttonColor: primaryColor,
               ),
               SizedBox(
                 height: 20.sp,
@@ -168,154 +181,44 @@ class SimpleTrip extends StatelessWidget {
               SizedBox(
                 height: 30.sp,
                 child: ListView.builder(
-                  itemCount: 1,
+                  itemCount: text.length,
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, index) {
                     return Row(
                       children: [
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: GlobalColors.primaryColor,
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 25.sp, right: 25.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'All',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: Colors.white),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Hotel',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Resturant',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Attraction',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
-                        ),
-                        Container(
-                            // width: 127.sp,
-                            height: 24.sp,
-                            decoration: BoxDecoration(
-                                color: Colors.white,
-                                border: Border.all(
-                                    width: 1, color: GlobalColors.primaryColor),
-                                borderRadius: BorderRadius.circular(43.sp)),
-                            child: Padding(
-                              padding:
-                                  EdgeInsets.only(left: 18.sp, right: 18.sp),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                crossAxisAlignment: CrossAxisAlignment.center,
-                                children: [
-                                  Text(
-                                    'Waterpark',
-                                    style: TextStyle(
-                                        fontSize: 12.sp,
-                                        fontWeight: FontWeight.w500,
-                                        fontFamily: 'MontserratMedium',
-                                        color: GlobalColors.primaryColor),
-                                  )
-                                ],
-                              ),
-                            )),
-                        SizedBox(
-                          width: 5.sp,
+                        GestureDetector(
+                          onTap: () {
+                            setState(() {
+                              selectedIndex = index;
+                            });
+                          },
+                          child: Container(
+                            margin: EdgeInsets.only(left: 5),
+                              // width: 127.sp,
+                              height: 24.sp,
+                              decoration: BoxDecoration(
+                                  color: selectedIndex == index ? primaryColor : white,
+                                  border: Border.all(color: primaryColor),
+                                  borderRadius: BorderRadius.circular(43.sp)),
+                              child: Padding(
+                                padding:
+                                    EdgeInsets.only(left: 25.sp, right: 25.sp),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      text[index],
+                                      style: TextStyle(
+                                          fontSize: 12.sp,
+                                          fontWeight: FontWeight.w500,
+                                          fontFamily: 'MontserratMedium',
+                                        color: selectedIndex == index ? Colors.white : primaryColor,),
+                                    )
+                                  ],
+                                ),
+                              )),
                         ),
                       ],
                     );
@@ -331,7 +234,7 @@ class SimpleTrip extends StatelessWidget {
                     fontSize: 17.8.sp,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'ProximaNovaSemiBold',
-                    color: GlobalColors.primaryColor),
+                    color: primaryColor),
               ),
               SizedBox(
                 height: 1.sp,
@@ -339,7 +242,7 @@ class SimpleTrip extends StatelessWidget {
               SizedBox(
                   width: 120.sp,
                   child: Divider(
-                      color: GlobalColors.primaryColor, thickness: 1.5)),
+                      color: primaryColor, thickness: 1.5)),
               SizedBox(
                 height: 13.sp,
               ),
@@ -367,6 +270,8 @@ class SimpleTrip extends StatelessWidget {
                 title: 'Legoland Dubai Resort',
                 date: '23/09/2023',
                 distance: '46km',
+                icon: Icons.remove,
+                iconButtonColor: Colors.red,
                 description:
                     'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
               ),
@@ -379,7 +284,7 @@ class SimpleTrip extends StatelessWidget {
                     fontSize: 17.8.sp,
                     fontWeight: FontWeight.w600,
                     fontFamily: 'ProximaNovaSemiBold',
-                    color: GlobalColors.primaryColor),
+                    color: primaryColor),
               ),
               SizedBox(
                 height: 1.sp,
@@ -387,7 +292,7 @@ class SimpleTrip extends StatelessWidget {
               SizedBox(
                   width: 147.sp,
                   child: Divider(
-                      color: GlobalColors.primaryColor, thickness: 1.5)),
+                      color: primaryColor, thickness: 1.5)),
               SizedBox(
                 height: 23.sp,
               ),
@@ -415,6 +320,8 @@ class SimpleTrip extends StatelessWidget {
                 title: 'Legoland Dubai Resort',
                 date: '23/09/2023',
                 distance: '46km',
+                icon: Icons.remove,
+                iconButtonColor: Colors.red,
                 description:
                     'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
               ),
@@ -437,6 +344,8 @@ class SimpleTrip extends StatelessWidget {
                 title: 'Legoland Dubai Resort',
                 date: '23/09/2023',
                 distance: '46km',
+                icon: Icons.remove,
+                iconButtonColor: Colors.red,
                 description:
                     'Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of ',
               ),
@@ -494,13 +403,13 @@ class SimpleTrip extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            bottomContainer(image: checklist, color: GlobalColors.green),
-            bottomContainer(image: share, color: GlobalColors.green),
+            bottomContainer(image: checklist, color: green),
+            bottomContainer(image: share2, color: green),
             bottomContainer(image: delete, color: Color(0xffFF3333)),
             MainButton(
                 width: 158,
                 height: 56,
-                color: GlobalColors.primaryColor,
+                color: primaryColor,
                 text: "Save",
                 textColor: Colors.white,
                 textSize: 16,

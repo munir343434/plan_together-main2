@@ -71,7 +71,7 @@ class _CheckListState extends State<CheckList> {
                         TextWidget(
                             text: "Admin",
                             size: 12.85,
-                            color: GlobalColors.primaryColor,
+                            color: primaryColor,
                             fontWeight: FontWeight.w600),
                       ],
                     )
@@ -98,7 +98,7 @@ class _CheckListState extends State<CheckList> {
                   TextWidget(
                       text: "7 People Going",
                       size: 12.85,
-                      color: GlobalColors.primaryColor,
+                      color: primaryColor,
                       fontWeight: FontWeight.w600)
                 ]),
               ],

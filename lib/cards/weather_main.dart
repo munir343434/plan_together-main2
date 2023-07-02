@@ -25,7 +25,7 @@ class WeatherMain extends StatelessWidget {
         onTap: onPressed,
         child: Card(
           elevation: 3,
-          shadowColor: GlobalColors.primaryColor,
+          shadowColor: primaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12.sp),
           ),
@@ -35,7 +35,7 @@ class WeatherMain extends StatelessWidget {
               gradient: const LinearGradient(
                 colors: [Color(0xFF4F7FFA), Color(0xFF335FD1)],
               ),
-              // color: GlobalColors.textfield
+              // color: textfield
             ),
             child: Padding(
                 padding: EdgeInsets.only(

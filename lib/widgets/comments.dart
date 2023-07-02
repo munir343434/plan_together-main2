@@ -44,7 +44,7 @@ class Comments extends StatelessWidget {
                   TextWidget(
                       text: name,
                       size: 12.41,
-                      color: GlobalColors.homeBlackColor,
+                      color: homeBlackColor,
                       fontWeight: FontWeight.w700),
                   SizedBox(
                     height: 9,
@@ -52,7 +52,7 @@ class Comments extends StatelessWidget {
                   TextWidget(
                       text: text,
                       size: 12.41,
-                      color: GlobalColors.blackColor,
+                      color: blackColor,
                       fontWeight: FontWeight.w400),
                   SizedBox(
                     height: 4,
@@ -62,17 +62,17 @@ class Comments extends StatelessWidget {
                       TextWidget(
                           text: "Heart· Reply .",
                           size: 12.41,
-                          color: GlobalColors.primaryColor,
+                          color: primaryColor,
                           fontWeight: FontWeight.w400),
                       TextWidget(
                           text: "20h",
                           size: 12.41,
-                          color: GlobalColors.subHeading,
+                          color: subHeading,
                           fontWeight: FontWeight.w400)
                     ],
                   ),
                   SizedBox(height: 9,),
-                  TextWidget(text: text2??"", size: 12.41, color: GlobalColors.primaryColor, fontWeight: FontWeight.w400),
+                  TextWidget(text: text2??"", size: 12.41, color: primaryColor, fontWeight: FontWeight.w400),
 
                 ],
               ),

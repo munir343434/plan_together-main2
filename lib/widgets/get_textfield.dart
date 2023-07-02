@@ -8,7 +8,8 @@ Widget getTextField(
     String? label,
     String? image,
     IconData? iconData,
-    double height = 64,
+    double height = 60,
+      int maxline=1,
       double? contentPadding,
       double?borderRadius,
     TextEditingController? controller,
@@ -19,6 +20,7 @@ Widget getTextField(
   return SizedBox(
     height: height,
     child: TextFormField(
+      maxLines: maxline,
         validator: validator,
         controller: controller,
         onChanged: onChanged,
@@ -35,7 +37,7 @@ Widget getTextField(
               EdgeInsets.symmetric(vertical: 23.sp, horizontal: 26.sp):EdgeInsets.symmetric(horizontal: contentPadding.sp,),
           filled: true,
           labelText: label != null ? label : "",
-          labelStyle: TextStyle(color: GlobalColors.grey),
+          labelStyle: TextStyle(color: grey),
           fillColor: Colors.white,
           prefixIcon: image == null
               ? null
@@ -66,13 +68,13 @@ Widget getTextField(
               fontFamily: 'ProximaNovaRegular',
               fontWeight: FontWeight.w400),
           enabledBorder: OutlineInputBorder(
-              borderRadius: borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(0),
+              borderRadius: borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
-                  BorderSide(color: GlobalColors.border, width: 1.6.sp)),
+                  BorderSide(color: border, width: 1.6.sp)),
           focusedBorder: OutlineInputBorder(
-              borderRadius:borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(0),
+              borderRadius:borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
-                  BorderSide(color: GlobalColors.border, width: 1.6.sp)),
+                  BorderSide(color: border, width: 1.6.sp)),
         )),
   );
 }
