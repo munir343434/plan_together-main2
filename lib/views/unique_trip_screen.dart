@@ -149,8 +149,8 @@ class UniqueTrip extends StatelessWidget {
                     timeFrom: '5:30 PM',
                     dateTo: 'Wed, Apr 28 2023',
                     timeTo: '5:30 PM',
-                    buttonText: "Unique",
-                    buttonColor: Color(0XFF08B88E),
+                    // buttonText: "Unique",
+                    // buttonColor: Color(0XFF08B88E),
                   ),
                   SizedBox(
                     height: 30.sp,

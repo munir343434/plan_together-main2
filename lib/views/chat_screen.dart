@@ -21,9 +21,9 @@ class _ChatScreenState extends State<ChatScreen> {
         backgroundColor: whiteColor,
         elevation: 0.5,
         leading: Padding(
-          padding: EdgeInsets.only(left: 20),
+          padding: const EdgeInsets.only(left: 20),
           child: IconButton(
-            icon: Icon(Icons.arrow_back_ios_new_outlined),
+            icon: const Icon(Icons.arrow_back_ios_new_outlined),
             color: blackColor,
             onPressed: () => Navigator.of(context).pop(),
           ),
@@ -32,13 +32,13 @@ class _ChatScreenState extends State<ChatScreen> {
           Container(
             height: 40,
             width: 40,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 image: DecorationImage(
                     image: AssetImage("assets/images/profile2.png"),
                     fit: BoxFit.cover)),
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Column(
@@ -53,7 +53,7 @@ class _ChatScreenState extends State<ChatScreen> {
               TextWidget(
                   text: "Online",
                   size: 12.7,
-                  color: Color(0XFF130F26),
+                  color: const Color(0XFF130F26),
                   fontWeight: FontWeight.w400),
             ],
           ),
@@ -61,13 +61,13 @@ class _ChatScreenState extends State<ChatScreen> {
         actions: [
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.phone_enabled_sharp,
                 color: blackColor,
               )),
           IconButton(
               onPressed: () {},
-              icon: Icon(
+              icon: const Icon(
                 Icons.more_vert,
                 color: blackColor,
               )),
@@ -79,31 +79,31 @@ class _ChatScreenState extends State<ChatScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: EdgeInsets.only(left: 14,top: 25,right: 16),
+              padding: const EdgeInsets.only(left: 14,top: 25,right: 16),
               child: Column(children: [
-                ReceiverMessage(
+                const ReceiverMessage(
                   text: "Hello, good morning :)",
                   time: "11:20 PM",
                   icon: Icons.done_all_outlined,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
-                SenderMessage(
+                const SenderMessage(
                   text:
                   "Good morning, I saw your profile and i like your Personality.",
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
-                ReceiverMessage(text: "Thanks 😍"),
-                ReceiverMessage(image: "assets/images/message.png"),
-                ReceiverMessage(
+                const ReceiverMessage(text: "Thanks 😍"),
+                const ReceiverMessage(image: "assets/images/message.png"),
+                const ReceiverMessage(
                   text: "We are Going for the trip in \nDubai you wanna join",
                   time: "11:20 PM",
                   icon: Icons.done_all_outlined,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16,
                 ),
                 Row(
@@ -113,22 +113,23 @@ class _ChatScreenState extends State<ChatScreen> {
                       Container(
                         height: 61,
                         width: 39,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                             shape: BoxShape.circle,
                             image: DecorationImage(
                                 image: AssetImage("assets/images/inbox.png"),
                                 fit: BoxFit.cover)),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 5,
                       ),
                       Padding(
-                          padding: EdgeInsets.only(top: 15),
+                          padding: const EdgeInsets.only(top: 15),
                           child: Image.asset("assets/images/message_type.png"))
                     ]),
               ],),
             ),
-            Divider(thickness: 0.5,),
+            const SizedBox(height: 20,),
+            const Divider(thickness: 0.5,),
             Padding(
               padding: const EdgeInsets.only(left: 14,right: 16,top: 5,bottom: 10),
               child: Column(children: [
@@ -141,13 +142,13 @@ class _ChatScreenState extends State<ChatScreen> {
                               text: "Type a message",
                               sufixIcon: Icons.emoji_emotions_outlined),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 16,
                         ),
                         Container(
                           height: 50,
                           width: 50,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: primaryColor
                           ),child: Center(

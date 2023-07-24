@@ -25,7 +25,7 @@ class CustomAlertDialog extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
+              const Text(
                 "Add New Item",
                 style: TextStyle(
                   fontSize: 16,
@@ -42,8 +42,8 @@ class CustomAlertDialog extends StatelessWidget {
               ),
             ],
           ),
-          Divider(
-            thickness: 1,
+          const Divider(
+            thickness: 0.6,
           ),
         ],
       ),
@@ -53,7 +53,7 @@ class CustomAlertDialog extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
+            const Text(
               "Item Name",
               style: TextStyle(
                 fontSize: 16,
@@ -61,12 +61,13 @@ class CustomAlertDialog extends StatelessWidget {
                 fontWeight: FontWeight.w400,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 10,
             ),
             getTextField(
                 height: 39,
                 borderRadius: 0,
+
                 controller: textFieldController,
                 contentPadding: 20)
           ],

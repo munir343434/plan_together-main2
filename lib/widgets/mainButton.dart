@@ -1,7 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:plan_together/utils/global_colors.dart';
 
 class MainButton extends StatefulWidget {
   Border? border;

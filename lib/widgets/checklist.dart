@@ -64,7 +64,7 @@ class _CheckListState extends State<CheckList> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         TextWidget(
-                            text: "Andrew Sams",
+                            text: "Andrew Samss",
                             size: 18.53,
                             color: Colors.black,
                             fontWeight: FontWeight.w600),

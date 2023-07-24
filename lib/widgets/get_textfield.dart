@@ -70,11 +70,11 @@ Widget getTextField(
           enabledBorder: OutlineInputBorder(
               borderRadius: borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
-                  BorderSide(color: border, width: 1.6.sp)),
+                  BorderSide(color: border.withOpacity(0.7), width: 1.6.sp)),
           focusedBorder: OutlineInputBorder(
               borderRadius:borderRadius==null?BorderRadius.circular(48.sp):BorderRadius.circular(borderRadius),
               borderSide:
-                  BorderSide(color: border, width: 1.6.sp)),
+                  BorderSide(color: border.withOpacity(0.7), width: 1.6.sp)),
         )),
   );
 }
