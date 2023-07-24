@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/cards/home_screen_card.dart';
 import 'package:plan_together/utils/global_colors.dart';
 import 'package:plan_together/utils/images.dart';
 import 'package:plan_together/views/Profile_screen.dart';
+import 'package:plan_together/views/create_trip2.dart';
 import 'package:plan_together/widgets/mainButton.dart';
 import 'package:plan_together/widgets/text_widget.dart';
 
@@ -47,7 +47,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: whiteColor,
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.only(left: 17, right: 17, top: 25),
+            padding: const EdgeInsets.only(left: 17, right: 17, top: 25),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,18 +59,18 @@ class _HomeScreenState extends State<HomeScreen> {
                     textFont: FontWeight.w700,
                     textSize: 16,
                     onPressed: (){
-                      Get.to(ProfileScreen());
+                      Get.to(()=> const CreateTrip2());
                     },
                     textColor: Colors.white),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 TextWidget(
-                    text: "Community Timline",
+                    text: "Community Timeline",
                     size: 19.88,
                     color: homeBlackColor,
                     fontWeight: FontWeight.w600),
-                SizedBox(
+                const SizedBox(
                   height: 19,
                 ),
                 HomeScreenCard(
@@ -80,6 +80,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   description:
                       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
                   username: '@CameronStewart',
+                  onProfilePressed: ()=>  Get.to(()=> const ProfileScreen()),
                 ),
                 SizedBox(height: 22.sp),
                 HomeScreenCard(
@@ -89,6 +90,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   description:
                       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
                   username: '@CameronStewart',
+                  onProfilePressed: ()=>  Get.to(()=> const ProfileScreen()),
                 ),
                 SizedBox(height: 20.sp),
               ],

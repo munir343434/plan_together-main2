@@ -161,8 +161,8 @@ int selectedIndex = 0;
                 timeFrom: '5:30 PM',
                 dateTo: 'Wed, Apr 28 2023',
                 timeTo: '5:30 PM',
-                buttonText: "Simple",
-                buttonColor: primaryColor,
+                // buttonText: "Simple",
+                // buttonColor: primaryColor,
               ),
               SizedBox(
                 height: 20.sp,

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:plan_together/views/home_screen.dart';
 import 'package:plan_together/widgets/mainButton.dart';
 
 import '../utils/global_colors.dart';
@@ -27,7 +25,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
         elevation: 0.2,
         backgroundColor: whiteColor,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.arrow_back_ios_rounded,
             color: blackColor,
           ),
@@ -44,14 +42,9 @@ class _CreateTrip2State extends State<CreateTrip2> {
                 size: 21,
                 color: homeBlackColor,
                 fontWeight: FontWeight.w700),
-            TextWidget(
-                text: "Simple Trip",
-                size: 13,
-                color: Color(0XFF797979),
-                fontWeight: FontWeight.w600)
           ],
         ),
-        actions: [
+        actions: const [
           Padding(
               padding: EdgeInsets.only(right: 10),
               child: Icon(
@@ -64,7 +57,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
         child: SizedBox(
           height: double.maxFinite,
           child: Padding(
-            padding: EdgeInsets.all(29),
+            padding: const EdgeInsets.all(29),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -72,13 +65,13 @@ class _CreateTrip2State extends State<CreateTrip2> {
                 TextWidget(
                     text: "Trip Name",
                     size: 15,
-                    color: Color(0xff424242),
+                    color: const Color(0xff424242),
                     fontWeight: FontWeight.w600),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 getTextField(height: 56),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Row(
@@ -88,19 +81,19 @@ class _CreateTrip2State extends State<CreateTrip2> {
                     TextWidget(
                         text: "Departure Date",
                         size: 15,
-                        color: Color(0xff424242),
+                        color: const Color(0xff424242),
                         fontWeight: FontWeight.w600),
-                    SizedBox(
+                    const SizedBox(
                       width: 75,
                     ),
                     TextWidget(
                         text: "Arrival Date",
                         size: 15,
-                        color: Color(0xff424242),
+                        color: const Color(0xff424242),
                         fontWeight: FontWeight.w600),
                   ],
                 ),
-               SizedBox(height: 15,),
+               const SizedBox(height: 15,),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -109,11 +102,10 @@ class _CreateTrip2State extends State<CreateTrip2> {
                       padding: const EdgeInsets.only(right: 5),
                       child: SizedBox(
                           width: 156,
-                          child: Flexible(
-                              child: getTextField(
-                                  height: 56, iconData: Icons.calendar_month))),
+                          child: getTextField(
+                              height: 56, iconData: Icons.calendar_month)),
                     ),
-                    Expanded(
+                    const Expanded(
                         child: Divider(
                       thickness: 2,
                     )),
@@ -121,49 +113,48 @@ class _CreateTrip2State extends State<CreateTrip2> {
                       padding: const EdgeInsets.only(left: 5),
                       child: SizedBox(
                           width: 156,
-                          child: Flexible(
-                              child: getTextField(
+                          child: getTextField(
                             height: 56,
                             iconData: Icons.calendar_month,
-                          ))),
+                          )),
                     ),
                   ],
                 ),
 
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 TextWidget(
                     text: "Add Travelers",
                     size: 15,
-                    color: Color(0xff424242),
+                    color: const Color(0xff424242),
                     fontWeight: FontWeight.w600),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 getTextField(height: 56),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 TextWidget(
                     text: "Destinations",
                     size: 15,
-                    color: Color(0xff424242),
+                    color: const Color(0xff424242),
                     fontWeight: FontWeight.w600),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 getTextField(height: 56),
                 // Expanded(child: Container()),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 TextWidget(
                     text: "How you are Travelling",
                     size: 15,
-                    color: Color(0xff424242),
+                    color: const Color(0xff424242),
                     fontWeight: FontWeight.w600),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 Row(
@@ -179,7 +170,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                           child: Container(
                             height: 18,
                             width: 18,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: Color(0xffE0E0E0)
                             ),child: Center(
@@ -188,19 +179,19 @@ class _CreateTrip2State extends State<CreateTrip2> {
                               width: 12,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color:index==0? Color(0xff1976D2):Color(0xffE0E0E0),
+                                color:index==0? const Color(0xff1976D2):const Color(0xffE0E0E0),
                               ),
                           ),
                             ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 12,
                         ),
                         TextWidget(
                             text: "Car",
                             size: 15,
-                            color: Color(0xff424242),
+                            color: const Color(0xff424242),
                             fontWeight: FontWeight.w600)
                       ]),
                       Row(children: [
@@ -214,7 +205,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                           child: Container(
                           height: 18,
                           width: 18,
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                               shape: BoxShape.circle,
                               color: Color(0xffE0E0E0)
                           ),child: Center(
@@ -223,19 +214,19 @@ class _CreateTrip2State extends State<CreateTrip2> {
                               width: 12,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color:index==1? Color(0xff1976D2):Color(0xffE0E0E0),
+                                color:index==1? const Color(0xff1976D2):const Color(0xffE0E0E0),
                               ),
                             ),
                           ),
                       ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 12,
                         ),
                         TextWidget(
                             text: "Flight",
                             size: 15,
-                            color: Color(0xff424242),
+                            color: const Color(0xff424242),
                             fontWeight: FontWeight.w600)
                       ]),
                       Row(children: [
@@ -249,7 +240,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
                           child: Container(
                             height: 18,
                             width: 18,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Color(0xffE0E0E0)
                             ),child: Center(
@@ -258,19 +249,19 @@ class _CreateTrip2State extends State<CreateTrip2> {
                               width: 12,
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
-                                color:index==2? Color(0xff1976D2):Color(0xffE0E0E0),
+                                color:index==2? const Color(0xff1976D2):const Color(0xffE0E0E0),
                               ),
                             ),
                           ),
                           ),
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 12,
                         ),
                         TextWidget(
                             text: "Both",
                             size: 15,
-                            color: Color(0xff424242),
+                            color: const Color(0xff424242),
                             fontWeight: FontWeight.w600)
                       ]),
                     ])
@@ -283,7 +274,7 @@ class _CreateTrip2State extends State<CreateTrip2> {
         padding: const EdgeInsets.only(right: 23, left: 23, bottom: 16),
         child: InkWell(
           onTap: () {
-            Get.offAll(BottomTabs());
+            Get.offAll(const BottomTabs());
           },
           child: MainButton(
               color: primaryColor,

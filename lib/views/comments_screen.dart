@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/widgets/text_widget.dart';
 
 import '../utils/global_colors.dart';
@@ -21,9 +20,9 @@ class _CommentsScreenState extends State<CommentsScreen> {
           elevation: 0.5,
           backgroundColor: whiteColor,
           leading: Padding(
-            padding: EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(left: 20),
             child: IconButton(
-              icon: Icon(
+              icon: const Icon(
                 Icons.arrow_back_ios_rounded,
                 color: blackColor,
               ),
@@ -41,26 +40,26 @@ class _CommentsScreenState extends State<CommentsScreen> {
         child: Column(
             children: [
           Padding(
-            padding: EdgeInsets.only(left: 25, top: 10, right: 25),
+            padding: const EdgeInsets.only(left: 25, top: 10, right: 25),
             child: Column(
               children: [
-                Comments(
+                const Comments(
                   img: "assets/images/profile2.png",
                   text:
                       "Ultricies ultricies interdum dolor sodales. Vitae feugiat vitae vitae quis id consectetur. Aenean urna, lectus enim suscipit eget. Tristique bibendum nibh enim dui.",
                   name: "Courtney Henry",
                 ),
                 Padding(
-                  padding: EdgeInsets.only(left: 50),
+                  padding: const EdgeInsets.only(left: 50),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Image.asset("assets/images/dotted_line.png"),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
-                      Expanded(
+                      const Expanded(
                         child: Comments(
                           img: "assets/images/inbox2.png",
                           text:
@@ -71,7 +70,7 @@ class _CommentsScreenState extends State<CommentsScreen> {
                     ],
                   ),
                 ),
-                Comments(
+                const Comments(
                   img: "assets/images/profile2.png",
                   text:
                       "Ultricies ultricies interdum dolor sodales. Vitae feugiat vitae vitae quis id consectetur. Aenean urna, lectus enim suscipit eget. Tristique bibendum nibh enim dui.",
@@ -87,20 +86,20 @@ class _CommentsScreenState extends State<CommentsScreen> {
       ),
       bottomNavigationBar:
         Padding(
-          padding: EdgeInsets.only(left: 16, right: 16, top: 10,bottom: 20),
+          padding: const EdgeInsets.only(left: 16, right: 16, top: 10,bottom: 20),
           child: Row(children: [
             Expanded(
               child: textField(
                 text: "Write a Comment",
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: 16,
             ),
             Container(
               height: 50,
               width: 50,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   color: primaryColor),
               child: Center(

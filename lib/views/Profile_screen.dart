@@ -21,7 +21,8 @@ class ProfileScreen extends StatefulWidget {
   State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateMixin {
+class _ProfileScreenState extends State<ProfileScreen>
+    with TickerProviderStateMixin {
   late TabController _tabController;
 
   @override
@@ -53,8 +54,8 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                ProfileWidget(),
-                SizedBox(height: 45),
+                const ProfileWidget(),
+                const SizedBox(height: 45),
               ],
             ),
           ),
@@ -68,13 +69,28 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        TextWidget(
-                          text: "Cameron stewart",
-                          size: 21.88,
-                          color: homeBlackColor,
-                          fontWeight: FontWeight.w600,
+                        const SizedBox(height: 10),
+                        Row(
+                          children: [
+                            TextWidget(
+                              text: "Cameron stewart",
+                              size: 19.88,
+                              color: homeBlackColor,
+                              fontWeight: FontWeight.w600,
+                            ),
+                            const SizedBox(width: 10),
+                            const GradientText(
+                             'Super Traveller',
+                              textAlign: TextAlign.left,
+                              // shaderRect: Rect.fromLTWH(50.0, 25.0, 50.0, 50.0),
+                              // gradient: Gradients.backToFuture,
+                              style: TextStyle(
+                                  fontSize: 13,),
+                            ),
+                            Image.asset('assets/images/medal.png',height: 15,width: 15)
+                          ],
                         ),
-                        SizedBox(height: 5),
+                        const SizedBox(height: 5),
                         Row(
                           children: [
                             TextWidget(
@@ -83,30 +99,35 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                               color: homeBlackColor,
                               fontWeight: FontWeight.w600,
                             ),
-                            SizedBox(width: 5),
+                            const SizedBox(width: 5),
                             Image.asset(flag),
-                            SizedBox(height: 19),
+                            const SizedBox(height: 19),
                           ],
                         ),
-                        SizedBox(height: 15),
+                        const SizedBox(height: 15),
                       ],
                     ),
                   ),
                   SizedBox(
                     height: 70,
                     child: GridView(
-                      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
                         crossAxisCount: 3,
                         childAspectRatio: 1 / 0.4,
                       ),
-                      children: List.generate(
-                        3,
-                            (index) => _gridTile('1200', 'Followers'),
+                      // children: List.generate(
+                      //   3,
+                      //   (index) => _gridTile('1200', 'Followers'),
+                      children: [
+                        _gridTile('1200', 'Followers'),
+                        _gridTile('124', 'Following'),
+                        _gridTile('12', 'Trips'),
+                      ],
                       ),
-                    ),
                   ),
                   Padding(
-                    padding: EdgeInsets.only(left: 14, right: 14),
+                    padding: const EdgeInsets.only(left: 14, right: 14),
                     child: Row(
                       children: [
                         Expanded(
@@ -119,7 +140,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                             textFont: FontWeight.w700,
                           ),
                         ),
-                        SizedBox(width: 6),
+                        const SizedBox(width: 6),
                         Expanded(
                           child: MainButton(
                             height: 45,
@@ -138,15 +159,16 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                     indicatorColor: primaryColor,
                     indicatorWeight: 2,
                     controller: _tabController,
-                    labelPadding: EdgeInsets.symmetric(horizontal: 50.0),
+                    labelPadding: const EdgeInsets.symmetric(horizontal: 50.0),
                     labelColor: primaryColor,
-                    unselectedLabelColor: Color(0xff7B7B7B),
-                    indicatorPadding: EdgeInsets.symmetric(horizontal: 30.0),
-                    labelStyle: TextStyle(
+                    unselectedLabelColor: const Color(0xff7B7B7B),
+                    indicatorPadding:
+                        const EdgeInsets.symmetric(horizontal: 30.0),
+                    labelStyle: const TextStyle(
                       fontSize: 17.0,
                       fontWeight: FontWeight.w600,
                     ),
-                    tabs: [
+                    tabs: const [
                       Tab(text: 'Posts'),
                       Tab(text: 'Trips'),
                     ],
@@ -171,7 +193,7 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                             hearts: '416',
                             image: home,
                             description:
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+                                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
                             username: '@CameronStewart',
                           );
                         },
@@ -179,14 +201,14 @@ class _ProfileScreenState extends State<ProfileScreen> with TickerProviderStateM
                       ListView.builder(
                         itemCount: 10,
                         itemBuilder: (BuildContext context, int index) {
-                          return TripsWithFriends(
+                          return TripsOnProfile(
                             location: 'Sant Paulo, Milan, Italy',
                             dateFrom: 'Wed, Apr 28 2023',
                             timeFrom: '5:30 PM',
                             dateTo: 'Wed, Apr 28 2023',
                             timeTo: '5:30 PM',
-                            buttonColor: primaryColor,
-                            buttonText: "Simple",
+                            // buttonColor: primaryColor,
+                            // buttonText: "Simple",
                             share: info,
                             imageHeight: 25,
                             imageWidth: 25,
@@ -217,7 +239,8 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
   _SliverAppBarDelegate(this._content);
 
   @override
-  Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Container(
       color: Colors.white,
       child: _content,
@@ -238,8 +261,8 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
 
 Widget _gridTile(String number, String type) {
   return GestureDetector(
-    onTap: (){
-      Get.to(FollowersScreen());
+    onTap: () {
+      Get.to(const FollowersScreen());
     },
     child: Container(
       decoration: BoxDecoration(
@@ -254,18 +277,18 @@ Widget _gridTile(String number, String type) {
         children: [
           Text(
             number,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 17,
               fontWeight: FontWeight.w500,
               color: Color(0xff222B45),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 5,
           ),
           Text(
             type,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 12,
               color: Color(0xff6B779A),
               fontWeight: FontWeight.w500,
@@ -276,3 +299,62 @@ Widget _gridTile(String number, String type) {
     ),
   );
 }
+const hotLinear = LinearGradient(
+    colors: [Color(0xff8000FF), Color(0xffFF1F00)], begin: Alignment.centerLeft, end: Alignment.centerRight);
+
+class GradientText extends StatelessWidget {
+  const GradientText(
+      this.data, {
+        this.key,
+        required this.style,
+        this.gradient =hotLinear,
+        this.shaderRect,
+        this.textAlign,
+        this.textDirection,
+        this.locale,
+        this.softWrap,
+        this.overflow,
+        this.textScaleFactor,
+        this.maxLines,
+        this.semanticsLabel,
+      }) : super(key: key);
+
+  @override
+  final Key? key;
+  final String data;
+  final TextStyle style;
+  final TextAlign? textAlign;
+  final TextDirection? textDirection;
+  final Locale? locale;
+  final bool? softWrap;
+  final TextOverflow? overflow;
+  final double? textScaleFactor;
+  final int? maxLines;
+  final String? semanticsLabel;
+  final Gradient gradient;
+  final Rect? shaderRect;
+
+  @override
+  Widget build(BuildContext context) {
+    return ShaderMask(
+      // Regarding the blend mode: The source is the gradient to draw, and the
+      // destination is the text. With srcIn the gradient is drawn with the
+      // shape of the text.
+      blendMode: BlendMode.srcIn,
+      shaderCallback: (rect) => gradient.createShader(shaderRect ?? rect),
+      child: Text(
+        data,
+        style: style,
+        textAlign: textAlign,
+        textDirection: textDirection,
+        locale: locale,
+        softWrap: softWrap,
+        overflow: overflow,
+        textScaleFactor: textScaleFactor,
+        maxLines: maxLines,
+        semanticsLabel: semanticsLabel,
+      ),
+    );
+  }
+}
+

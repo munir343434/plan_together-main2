@@ -22,10 +22,10 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: Padding(
-          padding: EdgeInsets.only(),
+          padding: const EdgeInsets.only(),
           child: InkWell(
             onTap: () {},
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back_ios_rounded,
               color: Colors.black,
             ),
@@ -44,24 +44,24 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
                   size: 29,
                   color: homeBlackColor,
                   fontWeight: FontWeight.w700),
-              SizedBox(
+              const SizedBox(
                 height: 11,
               ),
               TextWidget(
                   text:
                       "Lorem ipsum dolor sit amet consectetur. Laoreet integer maecenas velit non ultricies risus vel..",
                   size: 14,
-                  color: Color(0xff828F9C),
+                  color: const Color(0xff828F9C),
                   fontWeight: FontWeight.w400),
-              SizedBox(
+              const SizedBox(
                 height: 28,
               ),
               TextWidget(
                   text: "Upload Trip pictures",
                   size: 17,
-                  color: Color(0xff1B1F31),
+                  color: const Color(0xff1B1F31),
                   fontWeight: FontWeight.w700),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               Container(
@@ -79,13 +79,13 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
                               );
                             }),
                       ),
-                      SizedBox(width: 10,),
+                      const SizedBox(width: 10,),
                       Expanded(
                         child: Container(
                           height: 116,
                           width: 116,
                           decoration: BoxDecoration(
-                            color: Color(0xffF0F0F0),
+                            color: const Color(0xffF0F0F0),
                             borderRadius: BorderRadius.circular(11),
                           ),
                           child: Column(
@@ -96,7 +96,7 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
                               TextWidget(
                                   text: "Upload image",
                                   size: 12,
-                                  color: Color(0xff9E9E9E),
+                                  color: const Color(0xff9E9E9E),
                                   fontWeight: FontWeight.w600),
                             ],
                           ),
@@ -110,44 +110,44 @@ class _TripRatingScreenState extends State<TripRatingScreen> {
                       )
                     ],
                   )),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
               TextWidget(
                   text: "Some information about your Trip",
                   size: 17,
-                  color: Color(0xff1B1F31),
+                  color: const Color(0xff1B1F31),
                   fontWeight: FontWeight.w700),
-              SizedBox(
+              const SizedBox(
                 height: 7,
               ),
               TextWidget(
                   text: "Tell us the overview of your Whole Trip",
                   size: 14,
-                  color: Color(0xff828F9C),
+                  color: const Color(0xff828F9C),
                   fontWeight: FontWeight.w400),
-     SizedBox(height: 17,),
+     const SizedBox(height: 17,),
               getTextField(maxline: 10,height:202,borderRadius: 36),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
               TextWidget(
                   text: "Rating of Trip",
                   size: 17,
-                  color: Color(0xff1B1F31),
+                  color: const Color(0xff1B1F31),
                   fontWeight: FontWeight.w700),
-              SizedBox(
+              const SizedBox(
                 height: 12,
               ),
               TextWidget(
                   text: "Rate your Trip from 1-5 Stars",
                   size: 14,
-                  color: Color(0xff828F9C),
+                  color: const Color(0xff828F9C),
                   fontWeight: FontWeight.w400),
-              SizedBox(
+              const SizedBox(
                 height: 15,
               ),
-              Row(children: List.generate(5, (index) => Icon(Icons.star,color: Color(0xffFFCD00),size: 30,)
+              Row(children: List.generate(5, (index) => const Icon(Icons.star,color: Color(0xffFFCD00),size: 30,)
               )
 
               )

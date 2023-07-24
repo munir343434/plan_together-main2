@@ -1,18 +1,13 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/utils/images.dart';
-import 'package:plan_together/views/create_trip.dart';
 import 'package:plan_together/widgets/add_new_trip_button.dart';
 import 'package:plan_together/widgets/chat_bot.dart';
 import 'package:plan_together/widgets/recent_trips.dart';
 import 'package:plan_together/widgets/text_widget.dart';
-import 'package:plan_together/widgets/welcome_widget.dart';
-
-import '../constant/constant.dart';
 import '../utils/global_colors.dart';
+import 'create_trip2.dart';
 
 class AiBot extends StatefulWidget {
   const AiBot({Key? key}) : super(key: key);
@@ -43,9 +38,9 @@ class _AiBotState extends State<AiBot> {
                         color: homeBlackColor,
                         fontWeight: FontWeight.w600),
                     Padding(
-                      padding: EdgeInsets.only(right: 17),
+                      padding: const EdgeInsets.only(right: 17),
                       child: AddNewTripButton(text: "Add New Trip",onPressed: (){
-                        Get.to(const CreateTrip());
+                        Get.to(()=>const CreateTrip2());
                       },)
                     )
                   ],
@@ -79,11 +74,11 @@ class _AiBotState extends State<AiBot> {
                 //       RecentTrips(img: dubai1, cityName: "Milano Park", location: "Sant Paulo, Milan, Italy"),
                 //  ] ),
                 // ),
-                SizedBox(
+                const SizedBox(
                   height: 26,
                 ),
                 Padding(
-                  padding: EdgeInsets.only(right: 30),
+                  padding: const EdgeInsets.only(right: 30),
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -93,33 +88,33 @@ class _AiBotState extends State<AiBot> {
                           size: 19,
                           color: homeBlackColor,
                           fontWeight: FontWeight.w600),
-                      SizedBox(
+                      const SizedBox(
                         height: 26,
                       ),
-                      ChatBot(
+                      const ChatBot(
                         color: Color(0xff9547D2),
                         text: "Explain quantum computing in simple terms",
                         image: Y,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      ChatBot(
+                      const ChatBot(
                           color: Color(0xff10A37F),
                           text:
                               "Quantum computing is a type of computing where information is processed using quantum-mechanical phenomena, such as superposition and entanglement. In traditional computing, information is processed using bits, which can have a value of",
                           image: "assets/images/chatgpt.png"),
-                      SizedBox(
-                        height: 10,
+                      const SizedBox(
+                        height: 90,
                       ),
                     ],
                   ),
                 ),
                 Container(
-                  padding: EdgeInsets.only(right: 17),
+                  padding: const EdgeInsets.only(right: 17),
                   height: 48,
                   decoration: BoxDecoration(
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Color.fromRGBO(0, 0, 0, 0.13),
                         offset: Offset(0, 3),
@@ -139,19 +134,19 @@ class _AiBotState extends State<AiBot> {
                       border: InputBorder.none,
                       hintText: 'Write prompt',
                       hintStyle: TextStyle(
-                        color: Color(0xFF9B9B9B),
+                        color: const Color(0xFF9B9B9B),
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w600,
                         fontFamily: 'ProximaNovaMedium',
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Color(0xFFD1D5DB), width: 1.sp),
+                            BorderSide(color: const Color(0xFFD1D5DB), width: 1.sp),
                         // borderRadius: BorderRadius.circular(8.0),
                       ),
                       focusedBorder: OutlineInputBorder(
                         borderSide:
-                            BorderSide(color: Color(0xFFD1D5DB), width: 1.sp),
+                            BorderSide(color: const Color(0xFFD1D5DB), width: 1.sp),
                         // borderRadius: BorderRadius.circular(8.0),
                       ),
                       suffixIcon: Image.asset(

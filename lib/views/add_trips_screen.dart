@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:plan_together/cards/hourly_weather.dart';
-import 'package:plan_together/cards/resort_card.dart';
 import 'package:plan_together/cards/trips_with_friends.dart';
-import 'package:plan_together/cards/weather_main.dart';
 import 'package:plan_together/utils/global_colors.dart';
 import 'package:plan_together/utils/images.dart';
-import 'package:plan_together/views/create_trip.dart';
 import 'package:plan_together/views/simple_trip_screen.dart';
 import 'package:plan_together/views/unique_trip_screen.dart';
 import 'package:plan_together/widgets/add_new_trip_btn.dart';
 import 'package:plan_together/widgets/add_new_trip_button.dart';
 import 'package:plan_together/widgets/welcome_widget.dart';
+
+import 'create_trip2.dart';
 
 class AddTripsScreen extends StatelessWidget {
   const AddTripsScreen({super.key});
@@ -47,7 +44,7 @@ class AddTripsScreen extends StatelessWidget {
 
 
                     AddNewTripButton(text: "Add New Trip", onPressed: (){
-                      Get.to(CreateTrip());
+                      Get.to(()=>const CreateTrip2());
                     })
 
                   ],
@@ -69,8 +66,8 @@ class AddTripsScreen extends StatelessWidget {
                         timeFrom: '5:30 PM',
                         dateTo: 'Wed, Apr 28 2023',
                         timeTo: '5:30 PM',
-                        buttonColor: primaryColor,
-                        buttonText: "Simple",
+                        // buttonColor: primaryColor,
+                        // buttonText: "Simple",
                         share: info,
                         imageHeight: 25,
                         imageWidth: 25,
@@ -100,8 +97,8 @@ class AddTripsScreen extends StatelessWidget {
                         share:info ,
                         imageHeight: 25,
                         imageWidth: 25,
-                        buttonColor: Color(0xff08B88E),
-                        buttonText: "Unique",
+                        // buttonColor: Color(0xff08B88E),
+                        // buttonText: "Unique",
                         onPressed: () => Navigator.push(
                             context,
                             MaterialPageRoute(

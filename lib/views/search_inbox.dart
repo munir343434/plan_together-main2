@@ -24,39 +24,42 @@ class _SearchInboxState extends State<SearchInbox> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Padding(
-          padding: EdgeInsets.only(left: 17, right: 17, top: 25.sp),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              welcomeWidget(headingText: "Plan Together",subheading: "Build your own Vacation or Trip."),
-              TextWidget(
-                  text: "Inbox",
-                  size: 19.88,
-                  color: homeBlackColor,
-                  fontWeight: FontWeight.w600),
-              SizedBox(
-                height: 21,
-              ),
-              textField(
-                text: "Search People",
-                prefixIcon: Icons.search,
-              ),
-              SizedBox(
-                height: 17,
-              ),
-              InkWell(
-                  onTap: () {
-                    Get.to(() => ChatScreen()
-                    );
-                  },
-                  child: InboxMessage()),
-              InboxMessage(),
-              InboxMessageYesterday(),
-              InboxMessageYesterday(),
-              InboxMessageYesterday(),
-            ],
+        body: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Padding(
+            padding: EdgeInsets.only(left: 17, right: 17, top: 25.sp),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                welcomeWidget(headingText: "Plan Together",subheading: "Build your own Vacation or Trip."),
+                TextWidget(
+                    text: "Inbox",
+                    size: 19.88,
+                    color: homeBlackColor,
+                    fontWeight: FontWeight.w600),
+                SizedBox(
+                  height: 21,
+                ),
+                textField(
+                  text: "Search People",
+                  prefixIcon: Icons.search,
+                ),
+                SizedBox(
+                  height: 17,
+                ),
+                InkWell(
+                    onTap: () {
+                      Get.to(() => ChatScreen()
+                      );
+                    },
+                    child: InboxMessage()),
+                InboxMessage(),
+                InboxMessageYesterday(),
+                InboxMessageYesterday(),
+                InboxMessageYesterday(),
+              ],
+            ),
           ),
         ),
       ),

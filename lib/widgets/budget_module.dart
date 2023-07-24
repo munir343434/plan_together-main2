@@ -8,7 +8,7 @@ class BudgetModule extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 34,right: 34),
+      padding: const EdgeInsets.only(left: 34,right: 34),
       height: double.maxFinite,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

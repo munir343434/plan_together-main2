@@ -1,9 +1,6 @@
-import 'package:flutter_image_stack/flutter_image_stack.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 import 'package:plan_together/constant/constant.dart';
 import 'package:plan_together/utils/global_colors.dart';
-import 'package:plan_together/utils/images.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:plan_together/views/comments_screen.dart';
@@ -20,10 +17,12 @@ class HomeScreenCard extends StatefulWidget {
     this.description,
     this.onPressed,
     this.username,
+    this.onProfilePressed
   }) : super(key: key);
 
   String? hearts, comments, rating, image, description, username;
   VoidCallback? onPressed;
+  VoidCallback? onProfilePressed;
 
   @override
   State<HomeScreenCard> createState() => _HomeScreenCardState();
@@ -48,30 +47,33 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
-          Row(
-            children: [
-              Image.asset(
-                "assets/images/helmet.png",
-                width: 41.12,
-                height: 36.12,
-              ),
-              TextWidget(
-                  text: "${widget.username}",
-                  size: 14.15,
-                  color: homeBlackColor,
-                  fontWeight: FontWeight.w600),
-              SizedBox(
-                width: 10,
-              ),
-              TextWidget(
-                  text: "Connect",
-                  size: 14,
-                  color: primaryColor,
-                  fontWeight: FontWeight.w400),
-            ],
+          GestureDetector(
+            onTap: widget.onProfilePressed,
+            child: Row(
+              children: [
+                Image.asset(
+                  "assets/images/helmet.png",
+                  width: 41.12,
+                  height: 36.12,
+                ),
+                TextWidget(
+                    text: "${widget.username}",
+                    size: 14.15,
+                    color: homeBlackColor,
+                    fontWeight: FontWeight.w600),
+                const SizedBox(
+                  width: 10,
+                ),
+                TextWidget(
+                    text: "Connect",
+                    size: 14,
+                    color: primaryColor,
+                    fontWeight: FontWeight.w400),
+              ],
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15, right: 10),
@@ -86,7 +88,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                       fontWeight: FontWeight.w400),
                 ]),
           ),
-          SizedBox(
+          const SizedBox(
             height: 10,
           ),
           Stack(alignment: Alignment.center, children: [
@@ -100,11 +102,11 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
               top: 0,
               right: 0,
               child: Container(
-                padding: EdgeInsets.only(left: 8, top: 7),
+                padding: const EdgeInsets.only(left: 8, top: 7),
                 decoration: BoxDecoration(
-                    color: Color(0xff000000).withOpacity(0.5),
+                    color: const Color(0xff000000).withOpacity(0.5),
                     borderRadius:
-                        BorderRadius.only(topRight: Radius.circular(25))),
+                        const BorderRadius.only(topRight: Radius.circular(25))),
                 height: 41,
                 width: 113,
                 child: Column(
@@ -118,7 +120,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                         fontWeight: FontWeight.w400),
                     Row(
                       children: List.generate(5, (index){
-                        return Icon(
+                        return const Icon(
                           Icons.grade,
                           color: Colors.yellow,
                           size: 14,
@@ -132,7 +134,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
             Positioned(
               bottom: 10,
               child:
-              Row(children: [
+              Row(children: const [
                 Icon(
                   Icons.circle,
                   color: primaryColor,
@@ -165,11 +167,11 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
               ]),
             ),
           ]),
-          SizedBox(
+          const SizedBox(
             height: 9,
           ),
           Padding(
-            padding: EdgeInsets.only(left: 15, right: 10),
+            padding: const EdgeInsets.only(left: 15, right: 10),
             child:
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -179,7 +181,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                       size: 15,
                       color: Colors.black,
                       fontWeight: FontWeight.w500),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   GestureDetector(
@@ -194,7 +196,7 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
                     ),
                   ),
                   InkWell(onTap: (){
-                    Get.to(CommentsScreen());
+                    Get.to(const CommentsScreen());
                     setState(() {
                       isCommentClicked=!isCommentClicked;
                     });
@@ -228,9 +230,9 @@ class _HomeScreenCardState extends State<HomeScreenCard> {
 
                 ]),
           ),
-          SizedBox(height: 5,),
+          const SizedBox(height: 5,),
           Padding(
-            padding: EdgeInsets.only(left: 15,bottom: 10
+            padding: const EdgeInsets.only(left: 15,bottom: 10
             ),
             child: TextWidget(
                 text: "${widget.comments} Comments",
