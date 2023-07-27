@@ -73,93 +73,98 @@ class _ChatScreenState extends State<ChatScreen> {
               )),
         ],
       ),
-      body: SingleChildScrollView(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 16),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Padding(
-              padding: const EdgeInsets.only(left: 14,top: 25,right: 16),
-              child: Column(children: [
-                const ReceiverMessage(
-                  text: "Hello, good morning :)",
-                  time: "11:20 PM",
-                  icon: Icons.done_all_outlined,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const SenderMessage(
-                  text:
-                  "Good morning, I saw your profile and i like your Personality.",
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                const ReceiverMessage(text: "Thanks 😍"),
-                const ReceiverMessage(image: "assets/images/message.png"),
-                const ReceiverMessage(
-                  text: "We are Going for the trip in \nDubai you wanna join",
-                  time: "11:20 PM",
-                  icon: Icons.done_all_outlined,
-                ),
-                const SizedBox(
-                  height: 16,
-                ),
-                Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 61,
-                        width: 39,
-                        decoration: const BoxDecoration(
-                            shape: BoxShape.circle,
-                            image: DecorationImage(
-                                image: AssetImage("assets/images/inbox.png"),
-                                fit: BoxFit.cover)),
-                      ),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Padding(
-                          padding: const EdgeInsets.only(top: 15),
-                          child: Image.asset("assets/images/message_type.png"))
-                    ]),
-              ],),
-            ),
-            const SizedBox(height: 20,),
-            const Divider(thickness: 0.5,),
-            Padding(
-              padding: const EdgeInsets.only(left: 14,right: 16,top: 5,bottom: 10),
-              child: Column(children: [
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Row(
-                      children:[
-                        Expanded(
-                          child: textField(
-                              text: "Type a message",
-                              sufixIcon: Icons.emoji_emotions_outlined),
-                        ),
-                        const SizedBox(
-                          width: 16,
-                        ),
+            Expanded(
+              child: ListView(
+                shrinkWrap: true,
+                physics: const BouncingScrollPhysics(),
+                children: [
+
+                  const ReceiverMessage(
+                    text: "Hello, good morning :)",
+                    time: "11:20 PM",
+                    icon: Icons.done_all_outlined,
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const SenderMessage(
+                    text:
+                        "Good morning, I saw your profile and i like your Personality.",
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  const ReceiverMessage(text: "Thanks 😍"),
+                  const ReceiverMessage(image: "assets/images/message.png"),
+                  const ReceiverMessage(
+                    text: "We are Going for the trip in \nDubai you wanna join",
+                    time: "11:20 PM",
+                    icon: Icons.done_all_outlined,
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+                  Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
                         Container(
-                          height: 50,
-                          width: 50,
+                          height: 61,
+                          width: 39,
                           decoration: const BoxDecoration(
                               shape: BoxShape.circle,
-                              color: primaryColor
-                          ),child: Center(
-                          child: Image.asset("assets/icons/send3.png",width: 30,height: 30,),
+                              image: DecorationImage(
+                                  image: AssetImage("assets/images/inbox.png"),
+                                  fit: BoxFit.cover)),
                         ),
-                        )
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Padding(
+                            padding: const EdgeInsets.only(top: 15),
+                            child:
+                                Image.asset("assets/images/message_type.png"))
                       ]),
-                )
-              ],),
+                ],
+              ),
             ),
-
+            Column(
+              children: [
+                Row(children: [
+                  Expanded(
+                    child: textField(
+                        text: "Type a message",
+                        prefixIcon: Icons.attachment_outlined,
+                        prefixColor: const Color(0xffADB3BC),
+                        sufixIcon: const Icon(
+                          Icons.emoji_emotions_outlined,
+                          color: Color(0xffADB3BC),
+                        )),
+                  ),
+                  const SizedBox(
+                    width: 16,
+                  ),
+                  Container(
+                    height: 50,
+                    width: 50,
+                    decoration: const BoxDecoration(
+                        shape: BoxShape.circle, color: primaryColor),
+                    child: Center(
+                      child: Image.asset(
+                        "assets/icons/send3.png",
+                        width: 30,
+                        height: 30,
+                      ),
+                    ),
+                  )
+                ]),
+              ],
+            ),
           ],
         ),
       ),
