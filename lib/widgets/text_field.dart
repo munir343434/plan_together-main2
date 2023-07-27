@@ -6,12 +6,14 @@ Widget textField({
   required text,
   final sufixIcon,
   final prefixIcon,
+  Color? prefixColor
 }) {
   return TextField(
       decoration:  InputDecoration(
     filled: true, //<-- SEE HERE
     fillColor: Color(0xffF0F3F6),
     hintText: text,
+    suffixIcon: sufixIcon,
     labelStyle: const TextStyle(
         fontWeight: FontWeight.w400, fontSize: 14, color: Color(0xffADB3BC)),
     border: OutlineInputBorder(
@@ -21,7 +23,7 @@ Widget textField({
     prefixIcon: Icon(
       prefixIcon,
       size: 30,
-      color: primaryColor,
+      color: prefixColor??primaryColor,
     ),
   ));
 }

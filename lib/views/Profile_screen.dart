@@ -49,13 +49,13 @@ class _ProfileScreenState extends State<ProfileScreen>
       ),
       body: CustomScrollView(
         slivers: [
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const ProfileWidget(),
-                const SizedBox(height: 45),
+                ProfileWidget(),
+                SizedBox(height: 45),
               ],
             ),
           ),
@@ -179,54 +179,60 @@ class _ProfileScreenState extends State<ProfileScreen>
             pinned: true,
           ),
           SliverFillRemaining(
-            child: Column(
-              children: [
-                Expanded(
-                  child: TabBarView(
-                    controller: _tabController,
-                    children: [
-                      ListView.builder(
-                        itemCount: 2,
-                        itemBuilder: (BuildContext context, int index) {
-                          return HomeScreenCard(
-                            comments: '1600',
-                            hearts: '416',
-                            image: home,
-                            description:
-                                "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
-                            username: '@CameronStewart',
-                          );
-                        },
-                      ),
-                      ListView.builder(
-                        itemCount: 10,
-                        itemBuilder: (BuildContext context, int index) {
-                          return TripsOnProfile(
-                            location: 'Sant Paulo, Milan, Italy',
-                            dateFrom: 'Wed, Apr 28 2023',
-                            timeFrom: '5:30 PM',
-                            dateTo: 'Wed, Apr 28 2023',
-                            timeTo: '5:30 PM',
-                            // buttonColor: primaryColor,
-                            // buttonText: "Simple",
-                            share: info,
-                            imageHeight: 25,
-                            imageWidth: 25,
-                            onPressed: () => Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const SimpleTrip(),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: TabBarView(
+                      controller: _tabController,
+                      children: [
+                        ListView.builder(
+                          itemCount: 2,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10),
+                              child: HomeScreenCard(
+                                comments: '1600',
+                                hearts: '416',
+                                image: home,
+                                description:
+                                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum",
+                                username: '@CameronStewart',
                               ),
-                            ),
-                          );
-                        },
-                      ),
-                    ],
+                            );
+                          },
+                        ),
+                        ListView.builder(
+                          itemCount: 10,
+                          itemBuilder: (BuildContext context, int index) {
+                            return Padding(
+                              padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 10),
+                              child: TripsOnProfile(
+                                location: 'Sant Paulo, Milan, Italy',
+                                dateFrom: 'Wed, Apr 28 2023',
+                                timeFrom: '5:30 PM',
+                                dateTo: 'Wed, Apr 28 2023',
+                                timeTo: '5:30 PM',
+                                // buttonColor: primaryColor,
+                                // buttonText: "Simple",
+                                share: info,
+                                imageHeight: 25,
+                                imageWidth: 25,
+                                onPressed: () => Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => const SimpleTrip(),
+                                  ),
+                                ),
+                              ),
+                            );
+                          },
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
         ],
       ),
     );
